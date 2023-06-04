@@ -1,0 +1,102 @@
+/**
+Nav
+*/
+.layout-class {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.nav.styledHeader {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+}
+.nav.styledNav {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: #ccd6f6;
+    font-family:'Roboto Mono', 'SF Mono', 'Space Mono', monospace;
+    counter-reset: item 0;
+    z-index: 12;
+}
+.socialLinksStyledSidebar img {
+    filter: unset;
+}
+.nav.styledLinks {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.nav.styledLinks ol {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.nav.styledLinks ol li {
+    margin: 0px 5px;
+    position: relative;
+    counter-increment: item 1;
+    font-size: 13px;
+}
+.anchor {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.nav.styledLinks ol li .anchor {
+    padding: 10px;
+}
+.nav.styledLinks ol li .anchor::before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    color: #64ffda;
+    font-size: var(--fz-xxs);
+    text-align: right;
+}
+
+.nav.styledLinks .resumeButton {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-family: "SF Mono",'Space Mono', monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}

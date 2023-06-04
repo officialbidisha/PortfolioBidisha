@@ -1,0 +1,53 @@
+/**
+* Left Nav
+*/
+.sideStyledElementLeft {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: #a8b2d1;
+}
+.socialLinksStyledSidebar img {
+    filter:unset;
+}
+.socialLinksStyledSidebar {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.socialLinksStyledSidebar::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8b2d1;
+}
+.socialLinksStyledSidebar li .anchor:hover,
+.socialLinksStyledSidebar li .anchor:focus {
+    transform: translateY(-3px);
+    color: #64ffda;
+    filter: hue-rotate(320deg);
+}
+.socialLinksStyledSidebar li .anchor {
+    padding: 10px;
+}
+.socialLinksStyledSidebar li:last-of-type {
+    margin-bottom: 20px;
+}
+.pagesStyledMainContainer {
+    counter-reset: section 0;
+}
+.pagesStyledMainContainer.fillHeight {
+    padding: 0px 150px;
+}
+.inlineBlock{
+    display: inline-block !important;
+}
