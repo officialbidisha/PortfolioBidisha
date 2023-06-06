@@ -559,7 +559,7 @@ export default function Content() {
                     <p>
                       A web app that mocks food-ordering app, and deals with the
                       ordering of food items, adding them on cart, and handling
-                      cart data using state management, available at,
+                      cart data using state management, available at &nbsp;,
                       <a
                         href="https://officialbidisha.github.io/MealMarathon/"
                         rel="noopener noreferrer"
@@ -635,7 +635,7 @@ export default function Content() {
                     <p>
                       An application that shows the summary of a github user,
                       displaying their public repositories, weekly contribution
-                      - commits, addition, deletion, avaialble at,
+                      - commits, addition, deletion, avaialble at &nbsp;,
                       <a
                         href="https://officialbidisha.github.io/Git-Guide/"
                         rel="noopener noreferrer"
@@ -712,7 +712,7 @@ export default function Content() {
                       A web app that displays quotes added by different users.
                       In addition, it also allows the user to add , edit, and
                       delete quotes. Also, an user can comment on the quote of
-                      another user.Available at
+                      another user.Available at &nbsp;
                       <a
                         href="https://officialbidisha.github.io/QuotesDashboard/"
                         rel="noopener noreferrer"
