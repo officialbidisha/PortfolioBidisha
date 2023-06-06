@@ -5,7 +5,7 @@ export default function Content() {
     <div id="content">
       <main className={`${styles.pagesStylesMainContainer} ${styles.fillHeight}`}>
         <section className={styles.heroStyledHeroSection}>
-          <div style={{ transitionDelay: '100ms'}}>
+          <div className={styles.typewriter} style={{ transitionDelay: '100ms'}}>
             <h1>Hi, my name is</h1>
           </div>
           <div  style={{transitionDelay: '300ms'}}>
