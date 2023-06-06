@@ -250,7 +250,7 @@ export default function Content() {
                       user. The user can book flights, and filter based on
                       location, duration, price of flight, airline and whether
                       the flight has one stop or is it non stop. This project is
-                      available on
+                      available on &nbsp;
                       <a
                         href="https://officialbidisha.github.io/FlyM/"
                         target="_blank"
@@ -258,7 +258,7 @@ export default function Content() {
                         className={styles.anchor}
                       >
                         FlyM
-                      </a>
+                      </a>.
                     </p>
                   </div>
                   <ul className={styles.projectTechList}>
@@ -324,7 +324,7 @@ export default function Content() {
                     <p>
                       This project aims to provide a clone of slack. Individual
                       messages, chat rooms and creation of channel are some of
-                      the features provided in this. The project is available on
+                      the features provided in this. The project is available on &nbsp;
                       <a
                         href="https://officialbidisha.github.io/Slack-Clone/"
                         target="_blank"
@@ -332,7 +332,7 @@ export default function Content() {
                         className={styles.anchor}
                       >
                         Slack Clone
-                      </a>
+                      </a>.
                     </p>
                   </div>
                   <ul className={styles.projectTechList}>
@@ -559,7 +559,7 @@ export default function Content() {
                     <p>
                       A web app that mocks food-ordering app, and deals with the
                       ordering of food items, adding them on cart, and handling
-                      cart data using state management, available at &nbsp;,
+                      cart data using state management, available at &nbsp;
                       <a
                         href="https://officialbidisha.github.io/MealMarathon/"
                         rel="noopener noreferrer"
@@ -567,7 +567,7 @@ export default function Content() {
                         className={styles.anchor}
                       >
                         ReactMeals
-                      </a>
+                      </a> &nbsp;
                     </p>
                   </div>
                   <ul className={styles.projectTechList}>
@@ -635,7 +635,7 @@ export default function Content() {
                     <p>
                       An application that shows the summary of a github user,
                       displaying their public repositories, weekly contribution
-                      - commits, addition, deletion, avaialble at &nbsp;,
+                      - commits, addition, deletion, avaialble at &nbsp;
                       <a
                         href="https://officialbidisha.github.io/Git-Guide/"
                         rel="noopener noreferrer"
@@ -644,6 +644,7 @@ export default function Content() {
                       >
                         GitGuide
                       </a>
+                      &nbsp;
                       It also handles error scenarios and loading state.
                     </p>
                   </div>
@@ -720,7 +721,7 @@ export default function Content() {
                         className={styles.anchor}
                       >
                         QuotesDashboard
-                      </a>
+                      </a>.
                       In addition, quotes can also be sorted based on timeline
                       of creation. It also handles error scenarios and loading
                       state.
