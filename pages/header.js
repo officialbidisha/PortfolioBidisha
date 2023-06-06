@@ -60,7 +60,7 @@ export default function Header() {
             >
               <a
                 className={`${styles.resumeButton} ${styles.anchor}`}
-                href="./Bidisha_Das__Resume.pdf"
+                href="./../assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
