@@ -10,7 +10,7 @@ export default function Header() {
               src="/images/logo.jpg"
               width={80}
               height={60}
-              filter="unset"
+              style={{filter:"unset"}}
               href="/"
             />
           </a>

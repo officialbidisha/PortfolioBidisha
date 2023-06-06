@@ -492,12 +492,12 @@
 /*
   * Get in touch
   */
-.styled-contact-section {
+.styledContactSection {
   max-width: 600px;
   margin: 0px auto 100px;
   text-align: center;
 }
-.styled-contact-section .overline {
+.styledContactSection .overline {
   display: block;
   margin-bottom: 20px;
   color: #64ffda;;
@@ -505,17 +505,17 @@
   font-size: 16px;
   font-weight: 400;
 }
-.styled-contact-section .overline::before {
+.styledContactSection .overline::before {
   bottom: 0px;
   font-size: 14px;
 }
-.styled-contact-section .overline::after {
+.styledContactSection .overline::after {
   content: unset;
 }
-.styled-contact-section .title {
+.styledContactSection .title {
   font-size: clamp(40px, 5vw, 60px);
 }
-.styled-contact-section .email-link {
+.styledContactSection .emailLink {
   color: #64ffda;;
   background-color: transparent;
   border: 1px solid #64ffda;;
@@ -528,4 +528,12 @@
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   margin-top: 50px;
+}
+.anchor {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

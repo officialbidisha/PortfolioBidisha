@@ -17,10 +17,21 @@ export default function Content() {
               softwares with remarkable user experience. Having experince React,
               Angular and Vue, I build applications that are scalable and
               flexible.
-              <br />
-              <br /> Currently, I'm focused on web and mobile performance
+              <br/>
+              <br/>
+              Currently, I'm focused on ensuring seamless streaming experience by contributing to the Player Team at &nbsp;
+              <a
+                href="https://hotstar.com/"
+                target="_blank"
+                rel="norefferer"
+                className={styles.anchor}
+              >
+                Disney+Hotstar
+              </a>
+              <br/>
+              <br /> Previously, I was focused on web and mobile performance
               optimisation, building a fintech application (TripMoney), and
-              revamping desktop-smooth workflow at
+              revamping desktop-smooth workflow at &nbsp;
               <a
                 href="https://makemytrip.com/"
                 target="_blank"
@@ -29,6 +40,16 @@ export default function Content() {
               >
                 MakeMyTrip.
               </a>
+              <br/>
+              <br/>
+              I had also worked with               <a
+                href="https://autorabit.com/"
+                target="_blank"
+                rel="norefferer"
+                className={styles.anchor}
+              >
+                AutoRABIT
+              </a> to build a scalable Design System for organisation level consumption.
             </p>
           </div>
         </section>
@@ -59,7 +80,7 @@ export default function Content() {
                 <p>
                   My main focus these days is web and mobile performance
                   optimisation, building a fintech application (TripMoney), and
-                  revamping desktop-smooth workflow at
+                  revamping desktop-smooth workflow at &nbsp;
                   <a
                     className={styles.anchor}
                     href="https://makemytrip.com"
@@ -149,7 +170,7 @@ export default function Content() {
                 <div>
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
-                    <a href="https://github.com/officialbidisha/GoogleClone">
+                    <a href="https://github.com/officialbidisha/GoogleClone" className={styles.anchor}>
                       Google Clone
                     </a>
                   </h3>
@@ -195,6 +216,7 @@ export default function Content() {
                   href="https://officialbidisha.github.io/GoogleClone/"
                   rel="noopener noreferrer"
                   target="_blank"
+                  className={styles.anchor}
                   style={{height: 'auto'}}
                 >
                   <Image
@@ -204,7 +226,7 @@ export default function Content() {
                     height={0}
                     alt="Google Clone"
                     sizes="(min-width:900px) 900px, 100vw"
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -220,7 +242,7 @@ export default function Content() {
                 <div>
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
-                    <a href="https://github.com/officialbidisha/FlyM/">FlyM</a>
+                    <a href="https://github.com/officialbidisha/FlyM/" className={styles.anchor}>FlyM</a>
                   </h3>
                   <div className={styles.projectDescription}>
                     <p>
@@ -282,7 +304,7 @@ export default function Content() {
                     width={0}
                     height={0}
                     sizes ='(min-width:900px) 900px, 100vw'
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -294,7 +316,7 @@ export default function Content() {
                 <div>
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
-                    <a href="https://github.com/officialbidisha/Slack-Clone-/">
+                    <a href="https://github.com/officialbidisha/Slack-Clone-/"  className={styles.anchor}>
                       Slack Clone
                     </a>
                   </h3>
@@ -307,6 +329,7 @@ export default function Content() {
                         href="https://officialbidisha.github.io/Slack-Clone/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.anchor}
                       >
                         Slack Clone
                       </a>
@@ -325,6 +348,7 @@ export default function Content() {
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       <Image
                         src="/images/github.png"
@@ -342,6 +366,7 @@ export default function Content() {
                   rel="noopener noreferrer"
                   target="_blank"
                   style={{height: 'auto'}}
+                  className={styles.anchor}
                 >
                   <Image
                     sizes="(min-width:900px) 900px, 100vw"
@@ -350,7 +375,7 @@ export default function Content() {
                     width={0}
                     height={0}
                     alt="Slack Clone"
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -363,7 +388,7 @@ export default function Content() {
                 <div>
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
-                    <a href="https://github.com/officialbidisha/KanbanUI">
+                    <a href="https://github.com/officialbidisha/KanbanUI"  className={styles.anchor}>
                       Jira Clone
                     </a>
                   </h3>
@@ -377,6 +402,7 @@ export default function Content() {
                         href="https://62fe7cef544c2510f724b3e7--stately-profiterole-f6c458.netlify.app/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.anchor}
                       >
                         Jira Clone
                       </a>
@@ -397,6 +423,7 @@ export default function Content() {
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       <Image
                         src="/images/github.png"
@@ -423,7 +450,7 @@ export default function Content() {
                     alt="Jira Clone"
                     width={0}
                     height={0}
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -480,7 +507,7 @@ export default function Content() {
                         src="/images/github.png"
                         width={20}
                         height={20}
-                        filter="unset"
+                        style={{filter:'unset'}}
                       />
                     </a>
                   </div>
@@ -501,7 +528,7 @@ export default function Content() {
                     alt="Covid-Tracker"
                     width={0}
                     height={0}
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -582,7 +609,7 @@ export default function Content() {
                     alt="Covid-Tracker"
                     width={0}
                     height={0}
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height:'auto'}}
                   />
                 </a>
               </div>
@@ -632,12 +659,13 @@ export default function Content() {
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       <Image
                         src="/images/github.png"
                         width={20}
                         height={20}
-                        filter="unset"
+                        style={{filter:'unset'}}
                       />
                     </a>
                   </div>
@@ -648,6 +676,7 @@ export default function Content() {
                   href="https://officialbidisha.github.io/Git-Guide/"
                   rel="noopener noreferrer"
                   target="_blank"
+                  className={styles.anchor}
                   style={{height: 'auto'}}
                 >
                   <Image
@@ -657,7 +686,7 @@ export default function Content() {
                     alt="Git-Guide"
                     width={0}
                     height={0}
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -709,12 +738,13 @@ export default function Content() {
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       <Image
                         src="/images/github.png"
                         width={20}
                         height={20}
-                        filter="unset"
+                        style={{filter:'unset'}}
                       />
                     </a>
                   </div>
@@ -726,6 +756,7 @@ export default function Content() {
                   rel="noopener noreferrer"
                   target="_blank"
                   style={{height: 'auto'}}
+                  className={styles.anchor}
                 >
                   <Image
                     sizes="(min-width:900px) 900px, 100vw"
@@ -734,7 +765,7 @@ export default function Content() {
                     alt="Git-Guide"
                     width={0}
                     height={0}
-                    style={{objectFit: 'cover', opacity: 1}}
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
                   />
                 </a>
               </div>
@@ -758,7 +789,7 @@ export default function Content() {
                        src="/images/icons8-folder.svg"
                         width={25}
                         height={25}
-                        filter="unset"
+                        style={{filter:'unset'}}
                       />
                     </div>
                     <div className={styles.projectLinks}>
@@ -786,10 +817,10 @@ export default function Content() {
                       href="https://officialbidisha.github.io/React-Task-Reminder/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.otherProjectA}
+                      className={`${styles.otherProjectA} ${styles.anchor}`}
                     >
                       A Task Reminder using React, that provides a reminder to
-                      the user based on the tasks listed.
+                      the user based on the tasks listed
                     </a>
                   </h3>
                   <div className={styles.projectDescription}>
@@ -821,7 +852,7 @@ export default function Content() {
                        src="/images/icons8-folder.svg"
                        width={25}
                        height={25}
-                       filter="unset"
+                       style={{filter:'unset'}}
                       />
                     </div>
                     <div className={styles.projectLinks}>
@@ -830,7 +861,7 @@ export default function Content() {
                         aria-label="Extenal link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="external"
+                        className={`${styles.anchor} ${styles.external}`}
                       >
                         <Image
                          src="/images/icons8-share-3.svg"
@@ -849,7 +880,7 @@ export default function Content() {
                       href="https://github.com/officialbidisha/Assignment-Submission-Portal"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.otherProjectA}
+                      className={`${styles.anchor} ${styles.otherProjectA}`}
                     >
                       Assignment Submission Portal for Online Assignment
                       Assessment
@@ -884,7 +915,7 @@ export default function Content() {
                        src="/images/icons8-folder.svg"
                         width={25}
                         height={25}
-                        filter= "unset"
+                        style={{filter: 'unset'}}
                       />
                     </div>
                     <div className={styles.projectLinks}>
@@ -912,7 +943,7 @@ export default function Content() {
                       href="https://github.com/officialbidisha/Library-Management-System"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.otherProjectA}
+                      className={`${styles.otherProjectA} ${styles.anchor}`}
                     >
                       Library Management System for Educational Institution
                     </a>
@@ -947,16 +978,17 @@ export default function Content() {
                        src="/images/icons8-folder.svg"
                        width={25}
                        height={25}
-                       filter="unset"
+                       style={{filter:'unset'}}
                       />
                     </div>
                     <div className={styles.projectLinks}>
                       <a
                         href="https://officialbidisha.github.io/Todo-Mockup/"
                         aria-label="Extenal link"
-                        className="external new-todo-mockup"
+
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={`${styles.external} ${styles.newTodoMockup}`}
                       >
                         <Image
                          src="/images/icons8-share-3.svg"
@@ -975,7 +1007,7 @@ export default function Content() {
                       href="https://officialbidisha.github.io/Todo-Mockup/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={styles.otherProjectA}
+                      className={`${styles.otherProjectA} ${styles.anchor}`}
                     >
                       Todo Mockup using pure HTML, CSS.
                     </a>
@@ -999,16 +1031,16 @@ export default function Content() {
         </section>
         <section
           id="contact"
-          className="styled-contact-section"
+          className={styles.styledContactSection}
           style={{
             visibility: 'visible',
             opacity: 1,
-            transform: " matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,l) ",
-            transition:"opacity 0.5smcubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s"
+            transform:'matrix3d( 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 )',
+            transition: 'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s'
           }}
         >
-          <h2 className="numberedHeading overline">Lastly!</h2>
-          <h2 className="title">Get In Touch</h2>
+          <h2 className={`${styles.numberedHeading} ${styles.overline}`}>Lastly!</h2>
+          <h2 className={styles.title}>Get In Touch</h2>
           <p style={{fontSize: '18px'}}>
             I'm available on social networking sites and mostly active on Gmail,
             or LinkedIn. Whether it is just a question, or want to collaborate
@@ -1016,7 +1048,7 @@ export default function Content() {
             you as soon as possible.
           </p>
           <a
-            className="email-link"
+            className={`${styles.emailLink} ${styles.anchor}`}
             href="mailto:officialbidisha1@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
