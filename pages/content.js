@@ -1,17 +1,17 @@
 import Image from "next/image";
-import styles from "./header.module.css";
+import styles from "./content.module.css";
 export default function Content() {
   return (
     <div id="content">
-      <main class="pages-styled-main-container fillHeight">
-        <section class="hero-styled-hero-section">
-          <div class="fadeup-enter-done" style="transition-delay: 100ms">
+      <main className={`${styles.pagesStylesMainContainer} ${styles.fillHeight}`}>
+        <section className={styles.heroStyledHeroSection}>
+          <div style={{ transitionDelay: '100ms'}}>
             <h1>Hi, my name is</h1>
           </div>
-          <div class="fadeup-enter-done" style="transition-delay: 300ms">
-            <h2 class="big-heading">Bidisha Das</h2>
+          <div  style={{transitionDelay: '300ms'}}>
+            <h2 className={styles.bigHeading}>Bidisha Das</h2>
           </div>
-          <div class="fadeup-enter-done" style="transition-delay: 400ms">
+          <div  style={{transitionDelay: '400ms'}}>
             <p>
               I'm a software developer specializing in building and developing
               softwares with remarkable user experience. Having experince React,
@@ -25,6 +25,7 @@ export default function Content() {
                 href="https://makemytrip.com/"
                 target="_blank"
                 rel="norefferer"
+                className={styles.anchor}
               >
                 MakeMyTrip.
               </a>
@@ -34,12 +35,12 @@ export default function Content() {
         <section
           id="about"
           name="about"
-          class="about-styled-about-section"
+          className={styles.aboutStyledAboutSection}
           data-sr-id="0"
         >
-          <h2 class="numbered-heading">About Me</h2>
-          <div class="inner">
-            <div class="about-styled-text">
+          <h2 className={styles.numberedHeading}>About Me</h2>
+          <div className={styles.inner}>
+            <div className={styles.aboutStyledText}>
               <div>
                 <p>
                   Hello! My name is Bidisha and I enjoy developing websites
@@ -60,6 +61,7 @@ export default function Content() {
                   optimisation, building a fintech application (TripMoney), and
                   revamping desktop-smooth workflow at
                   <a
+                    className={styles.anchor}
                     href="https://makemytrip.com"
                     rel="noopener noreferrer"
                     target="_blank"
@@ -72,7 +74,7 @@ export default function Content() {
                   Here are a few technologies I've been working with recently:
                 </p>
               </div>
-              <ul class="skills-list">
+              <ul className={styles.skillsList}>
                 <li>JavaScript(ES6+)</li>
                 <li>TypeScript</li>
                 <li>React</li>
@@ -89,40 +91,43 @@ export default function Content() {
                 <li>Spring Boot</li>
               </ul>
             </div>
-            <div class="about-styled-pic">
-              <div class="wrapper">
-                <div class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-                  <div style="max-width: 500px; display: block">
-                    <img
+            <div className={styles.aboutStyledPic}>
+              <div className={styles.wrapper}>
+                <div className={`${styles.imageWrapper} ${styles.img}`}>
+                  <div style={{maxWidth: '500px', display: 'block'}}>
+                    <Image
                       alt
                       role="presentation"
                       aria-hidden="true"
-                      src="./transparent.jpg"
-                      style="
-                        max-width: 100%;
-                        display: block;
-                        position: static;
-                        "
+                     src="/images/transparent.jpg"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{
+                        maxWidth: '100%',
+                        display: 'block',
+                        position: 'static',
+                      }}
                     />
                   </div>
                   <div
                     aria-hidden="true"
-                    style="
-                        opacity: 0;
-                        transition: opacity 500ms linear 0s;
-                        background-color: rgb(232, 232, 232);
-                        position: absolute;
-                        inset: 0px;
-                        object-fit: cover;
-                    "
+                    style={{
+                        opacity: 0,
+                        transition:'opacity 500ms linear 0s',
+                        backgroundColor: 'rgb(232, 232, 232)',
+                        position: 'absolute',
+                        inset: '0px',
+                        objectFit: 'cover'
+                    }}
                   ></div>
                   <picture>
-                    <img
-                      width="500px"
-                      height="500px"
+                    <Image
+                      width={500}
+                      height={500}
                       sizes="(min-width:500px) 500px, 100vw"
                       decoding="async"
-                      src="./1.jpg"
+                      src="/images/1.jpg"
                       alt="Headshot"
                     />
                   </picture>
@@ -133,22 +138,22 @@ export default function Content() {
           </div>
         </section>
         <section id="projects">
-          <h2 class="numbered-heading" data-sr-id="3">
+          <h2 className={styles.numberedHeading} data-sr-id="3">
             Some Things I've Built
           </h2>
-          <ul class="featured-styled-projects">
+          <ul className={styles.styledProjectsFeatured}>
             <li
-              class="featured-styles-project-1 sectionStyle"
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/GoogleClone">
                       Google Clone
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       A clone of google with search facilities, random search
                       with images built with love using Next.js
@@ -156,63 +161,68 @@ export default function Content() {
                         href="https://google-cloneq-m78il8ifb-officialbidisha.vercel.app"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.anchor}
                       >
                         Google Clone
                       </a>
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>Next.js</li>
                     <li>React</li>
                     <li>Tailwind CSS</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/GoogleClone/"
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/GoogleClone/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
                 >
-                  <img
-                    sizes="(min-width:900px) 900px, 100vw"
+                  <Image
                     decoding="async"
-                    src="./googleclone.png"
+                    src="/images/googleclone.png"
+                    width={0}
+                    height={0}
                     alt="Google Clone"
-                    style="object-fit: cover; opacity: 1"
+                    sizes="(min-width:900px) 900px, 100vw"
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
 
             <li
-              class="featured-styles-project-1 sectionStyle"
-              style="
-                visibility: visible;
-                opacity: 1;
-            "
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
+              style={{
+                visibility: 'visible',
+                opacity: 1}}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/FlyM/">FlyM</a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       This project provides the feature of flight booking to the
                       user. The user can book flights, and filter based on
@@ -223,12 +233,13 @@ export default function Content() {
                         href="https://officialbidisha.github.io/FlyM/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.anchor}
                       >
                         FlyM
                       </a>
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>React</li>
                     <li>Redux</li>
                     <li>Thunk</li>
@@ -238,50 +249,56 @@ export default function Content() {
                     <li>Material UI</li>
                     <li>Axios</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/FlyM/"
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/FlyM/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
+                  className={styles.anchor}
                 >
-                  <img
-                    sizes="(min-width:900px) 900px, 100vw"
+                  <Image
                     decoding="async"
-                    src="./Flym1.png"
+                    src="/images/Flym1.png"
                     alt="Slack Clone"
-                    style="object-fit: cover; opacity: 1"
+                    width={0}
+                    height={0}
+                    sizes ='(min-width:900px) 900px, 100vw'
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
             <li
-              class="featured-styles-project-1 sectionStyle"
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/Slack-Clone-/">
                       Slack Clone
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       This project aims to provide a clone of slack. Individual
                       messages, chat rooms and creation of channel are some of
@@ -295,83 +312,62 @@ export default function Content() {
                       </a>
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>VS Code</li>
                     <li>React</li>
                     <li>Firebase</li>
                     <li>Material UI</li>
                     <li>Functional Components</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/Slack-Clone-/"
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/Slack-Clone/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
                 >
-                  <img
+                  <Image
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
-                    src="./slack-clone.png"
+                    src="/images/slack-clone.png"
+                    width={0}
+                    height={0}
                     alt="Slack Clone"
-                    style="object-fit: cover; opacity: 1"
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
 
             <li
-              class="featured-styles-project-1"
-              style="
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                transition: opacity 0.5s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                "
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/KanbanUI">
                       Jira Clone
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       This project aims to provide a clone of jira dashboard. It
                       is enriched with features like user selection, filter
@@ -386,7 +382,7 @@ export default function Content() {
                       </a>
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>VS Code</li>
                     <li>Angular</li>
                     <li>Spring Boot</li>
@@ -395,75 +391,61 @@ export default function Content() {
                     <li>Bootstrap</li>
                     <li>PrimeNG</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/Jira-Kanban"
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/Jira-Kanban/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  className={styles.anchor}
+                  style={{height: 'auto'}}
                 >
-                  <img
+                  <Image
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
-                    src="./JiraClone.png"
+                    src="/images/JiraClone.png"
                     alt="Jira Clone"
-                    style="object-fit: cover; opacity: 1"
+                    width={0}
+                    height={0}
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
             <li
-              class="featured-styles-project-1"
-              style="
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                transition: opacity 0.5s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                "
+              className={styles.styledFeature}
+              style={{
+                visibility: 'visible',
+                opacity: 1,
+                transform: "matrix3d(1,0, 0,0,0, 1,0,0,0,0,1,0,0,0,0,1)",
+                transition: "opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s"
+                }}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
-                    <a href="https://https://officialbidisha.github.io/CovidTracker/">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
+                    <a href="https://https://officialbidisha.github.io/CovidTracker/" className={styles.anchor}>
                       CovidTracker
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       The project aims to show a statistical record in tabular
                       as well as graphical format of COVID-19 effected patients
@@ -473,91 +455,80 @@ export default function Content() {
                         href="https://officialbidisha.github.io/CovidTracker/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className={styles.anchor}
                       >
                         CovidTracker
                       </a>
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>VS Code</li>
                     <li>Angular</li>
                     <li>RxJs</li>
                     <li>Bootstrap</li>
                     <li>PrimeNG</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/CovidTracker"
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        filter="unset"
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/CovidTracker/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
+                  className={styles.anchor}
                 >
-                  <img
+                  <Image
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
-                    src="./CovidTracker1.png"
+                    src="/images/CovidTracker1.png"
                     alt="Covid-Tracker"
-                    style="object-fit: cover; opacity: 1"
+                    width={0}
+                    height={0}
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
             <li
-              class="featured-styles-project-1"
-              style="
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                transition: opacity 0.5s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                "
+              className={styles.styledFeature}
+              style={{
+                visibility: 'visible',
+                opacity: 1,
+                transform: "matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1)",
+                transition:" opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s"
+              }}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/MealMarathon/"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       Meals Marathon
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       A web app that mocks food-ordering app, and deals with the
                       ordering of food items, adding them on cart, and handling
@@ -566,91 +537,74 @@ export default function Content() {
                         href="https://officialbidisha.github.io/MealMarathon/"
                         rel="noopener noreferrer"
                         target="_blank"
+                        className={styles.anchor}
                       >
                         ReactMeals
                       </a>
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>React</li>
                     <li>Firebase</li>
                     <li>VS Code</li>
                     <li>Redux</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/MealMarathon"
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/MealMarathon/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
+                  className={styles.anchor}
                 >
-                  <img
+                  <Image
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
-                    src="./ReactMeals.png"
+                    src="/images/ReactMeals.png"
                     alt="Covid-Tracker"
-                    style="object-fit: cover; opacity: 1"
+                    width={0}
+                    height={0}
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
 
             <li
-              class="featured-styles-project-1"
-              style="
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                transition: opacity 0.5s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                "
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/Git-Guide/"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       Git Guide
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       An application that shows the summary of a github user,
                       displaying their public repositories, weekly contribution
@@ -659,91 +613,72 @@ export default function Content() {
                         href="https://officialbidisha.github.io/Git-Guide/"
                         rel="noopener noreferrer"
                         target="_blank"
+                        className={styles.anchor}
                       >
                         GitGuide
                       </a>
                       It also handles error scenarios and loading state.
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>Angular</li>
                     <li>Github</li>
                     <li>VS Code</li>
                     <li>NgRx</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/Git-Guide"
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        filter="unset"
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/Git-Guide/"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
                 >
-                  <img
+                  <Image
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
-                    src="./git-guide.png"
+                   src="/images/git-guide.png"
                     alt="Git-Guide"
-                    style="object-fit: cover; opacity: 1"
+                    width={0}
+                    height={0}
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
             <li
-              class="featured-styles-project-1"
-              style="
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                transition: opacity 0.5s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                "
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
-              <div class="project-content">
+              <div className={styles.projectContent}>
                 <div>
-                  <p class="project-overline">Featured Project</p>
-                  <h3 class="project-title">
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/QuotesDashboard/"
                       rel="noopener noreferrer"
                       target="_blank"
+                      className={styles.anchor}
                     >
                       Quotes Dashboard
                     </a>
                   </h3>
-                  <div class="project-description">
+                  <div className={styles.projectDescription}>
                     <p>
                       A web app that displays quotes added by different users.
                       In addition, it also allows the user to add , edit, and
@@ -753,6 +688,7 @@ export default function Content() {
                         href="https://officialbidisha.github.io/QuotesDashboard/"
                         rel="noopener noreferrer"
                         target="_blank"
+                        className={styles.anchor}
                       >
                         QuotesDashboard
                       </a>
@@ -761,148 +697,103 @@ export default function Content() {
                       state.
                     </p>
                   </div>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>React</li>
                     <li>Redux</li>
                     <li>VS Code</li>
                     <li>Firebase</li>
                   </ul>
-                  <div class="project-links">
+                  <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/QuotesDashboard"
                       aria-label="GitHub Link"
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <img
-                        src="github.png"
-                        style="width: 20px; height: 20px; filter: unset"
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        filter="unset"
                       />
                     </a>
                   </div>
                 </div>
               </div>
-              <div class="project-image">
+              <div className={styles.projectImage}>
                 <a
                   href="https://officialbidisha.github.io/QuotesDashboard"
                   rel="noopener noreferrer"
                   target="_blank"
-                  style="height: auto"
+                  style={{height: 'auto'}}
                 >
-                  <img
+                  <Image
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
-                    src="./QuotesDashboard.png"
+                    src="/images/QuotesDashboard.png"
                     alt="Git-Guide"
-                    style="object-fit: cover; opacity: 1"
+                    width={0}
+                    height={0}
+                    style={{objectFit: 'cover', opacity: 1}}
                   />
                 </a>
               </div>
             </li>
           </ul>
         </section>
-        <section class="other-projects" id="smallprojects">
-          <h2
-            style="
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                1,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                1
-                );
-                transition: opacity 0.5s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-                transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-            "
+        <section className={styles.otherProjects} id="smallprojects">
+          <h2 className={styles.sectionStyle}
           >
             Other Noteworthy Projects
           </h2>
-          <ul class="projects-grid">
+          <ul className={styles.projectsGrid}>
             <li
-              class="styled-project"
-              style="
-                transition: all 0.25s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                "
+              className={`${styles.styledProject} ${styles.sectionStyle}`}
             >
-              <div class="project-inner">
+              <div className={styles.projectInner}>
                 <header>
-                  <div class="project-top">
-                    <div class="folder">
-                      <img
-                        src="./icons8-folder.svg"
-                        style="width: 25px; height: 25px; filter: unset"
+                  <div className={styles.projectTop}>
+                    <div className={styles.folder}>
+                      <Image
+                       src="/images/icons8-folder.svg"
+                        width={25}
+                        height={25}
+                        filter="unset"
                       />
                     </div>
-                    <div class="project-links">
+                    <div className={styles.projectLinks}>
                       <a
                         href="https://officialbidisha.github.io/React-Task-Reminder/"
                         aria-label="Extenal link"
-                        class="external"
+                        className={`${styles.external} ${styles.anchor}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
-                          src="./icons8-share-3.svg"
-                          style="
-                            width: 22px;
-                            height: 22px;
-                            margin-top: -4px;
-                            filter: unset;
-                            "
+                        <Image
+                         src="/images/icons8-share-3.svg"
+                          width={22}
+                          height={22}
+                          style={{
+                            marginTop: '-4px',
+                            filter: 'unset'
+                          }}
                         />
                       </a>
                     </div>
                   </div>
-                  <h3 class="project-title">
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/React-Task-Reminder/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="other-project-a"
+                      className={styles.otherProjectA}
                     >
                       A Task Reminder using React, that provides a reminder to
                       the user based on the tasks listed.
                     </a>
                   </h3>
-                  <div class="project-description">
-                    <p class="description-project">
+                  <div className={styles.projectDescription}>
+                    <p className={styles.descriptionProject}>
                       Building a website that provides a reminder for listed
                       items from the user. The user can add an item, delete an
                       item and also toggle reminder.
@@ -910,7 +801,7 @@ export default function Content() {
                   </div>
                 </header>
                 <footer>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>React</li>
                     <li>JSON Server</li>
                     <li>Visual Studio Code</li>
@@ -920,76 +811,52 @@ export default function Content() {
               </div>
             </li>
             <li
-              class="styled-project"
-              style="
-                transition: all 0.25s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                "
+              className={`${styles.styledProject} ${styles.allTransition}`}
             >
-              <div class="project-inner">
+              <div className={styles.projectInner}>
                 <header>
-                  <div class="project-top">
-                    <div class="folder">
-                      <img
-                        src="./icons8-folder.svg"
-                        style="width: 25px; height: 25px; filter: unset"
+                  <div className={styles.projectTop}>
+                    <div className={styles.folder}>
+                      <Image
+                       src="/images/icons8-folder.svg"
+                       width={25}
+                       height={25}
+                       filter="unset"
                       />
                     </div>
-                    <div class="project-links">
+                    <div className={styles.projectLinks}>
                       <a
                         href="https://github.com/officialbidisha/Assignment-Submission-Portal"
                         aria-label="Extenal link"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="external"
+                        className="external"
                       >
-                        <img
-                          src="./icons8-share-3.svg"
-                          style="
-                            width: 22px;
-                            height: 22px;
-                            margin-top: -4px;
-                            filter: unset;
-                            "
+                        <Image
+                         src="/images/icons8-share-3.svg"
+                         width={22}
+                         height={22}
+                          style={{
+                            marginTop: '-4px',
+                            filter: 'unset'
+                          }}
                         />
                       </a>
                     </div>
                   </div>
-                  <h3 class="project-title">
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://github.com/officialbidisha/Assignment-Submission-Portal"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="other-project-a"
+                      className={styles.otherProjectA}
                     >
                       Assignment Submission Portal for Online Assignment
                       Assessment
                     </a>
                   </h3>
-                  <div class="project-description">
-                    <p class="description-project">
+                  <div className={styles.projectDescription}>
+                    <p className={styles.descriptionProject}>
                       A web application used to submit assignments, view notice
                       and see study materials. Helps in maintaining distant
                       learning and periodical assessment of student performance.
@@ -997,7 +864,7 @@ export default function Content() {
                   </div>
                 </header>
                 <footer>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>PHP</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
@@ -1007,75 +874,51 @@ export default function Content() {
               </div>
             </li>
             <li
-              class="styled-project"
-              style="
-                transition: all 0.25s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                "
+              className={`${styles.styledProject} ${styles.allTransition}`}
             >
-              <div class="project-inner">
+              <div className={styles.projectInner}>
                 <header>
-                  <div class="project-top">
-                    <div class="folder">
-                      <img
-                        src="./icons8-folder.svg"
-                        style="width: 25px; height: 25px; filter: unset"
+                  <div className={styles.projectTop}>
+                    <div className={styles.folder}>
+                      <Image
+                       src="/images/icons8-folder.svg"
+                        width={25}
+                        height={25}
+                        filter= "unset"
                       />
                     </div>
-                    <div class="project-links">
+                    <div className={styles.projectLinks}>
                       <a
                         href="https://github.com/officialbidisha/Library-Management-System"
                         aria-label="Extenal link"
-                        class="external"
+                        className={`${styles.external} ${styles.anchor}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
-                          src="./icons8-share-3.svg"
-                          style="
-                            width: 22px;
-                            height: 22px;
-                            margin-top: -4px;
-                            filter: unset;
-                            "
+                        <Image
+                         src="/images/icons8-share-3.svg"
+                          width={22}
+                          height={22}
+                          style={{
+                            marginTop: '-4px',
+                            filter: 'unset'
+                          }}
                         />
                       </a>
                     </div>
                   </div>
-                  <h3 class="project-title">
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://github.com/officialbidisha/Library-Management-System"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="other-project-a"
+                      className={styles.otherProjectA}
                     >
                       Library Management System for Educational Institution
                     </a>
                   </h3>
-                  <div class="project-description">
-                    <p class="description-project">
+                  <div className={styles.projectDescription}>
+                    <p className={styles.descriptionProject}>
                       Maintaining education organisation level library
                       management system that accomodates separate accessibility
                       for admin and students.
@@ -1083,7 +926,7 @@ export default function Content() {
                   </div>
                 </header>
                 <footer>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>Vue.js</li>
                     <li>MongoDB</li>
                     <li>MySQL</li>
@@ -1094,81 +937,57 @@ export default function Content() {
               </div>
             </li>
             <li
-              class="styled-project"
-              style="
-                transition: all 0.25s
-                    cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
-                    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-                visibility: visible;
-                opacity: 1;
-                transform: matrix3d(
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1,
-                    0,
-                    0,
-                    0,
-                    0,
-                    1
-                );
-                "
+              className={`${styles.styledProject} ${styles.sectionStyle} ${styles.allTransition}`}
             >
-              <div class="project-inner">
+              <div className={styles.projectInner}>
                 <header>
-                  <div class="project-top">
-                    <div class="folder">
-                      <img
-                        src="./icons8-folder.svg"
-                        style="width: 25px; height: 25px; filter: unset"
+                  <div className={styles.projectTop}>
+                    <div className={styles.folder}>
+                      <Image
+                       src="/images/icons8-folder.svg"
+                       width={25}
+                       height={25}
+                       filter="unset"
                       />
                     </div>
-                    <div class="project-links">
+                    <div className={styles.projectLinks}>
                       <a
                         href="https://officialbidisha.github.io/Todo-Mockup/"
                         aria-label="Extenal link"
-                        class="external new-todo-mockup"
+                        className="external new-todo-mockup"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
-                          src="./icons8-share-3.svg"
-                          style="
-                            width: 22px;
-                            height: 22px;
-                            margin-top: -4px;
-                            filter: unset;
-                            "
+                        <Image
+                         src="/images/icons8-share-3.svg"
+                         width={22}
+                         height={22}
+                          style={{
+                            marginTop:'-4px',
+                            filter: 'unset'
+                          }}
                         />
                       </a>
                     </div>
                   </div>
-                  <h3 class="project-title">
+                  <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/Todo-Mockup/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="other-project-a"
+                      className={styles.otherProjectA}
                     >
                       Todo Mockup using pure HTML, CSS.
                     </a>
                   </h3>
-                  <div class="project-description">
-                    <p class="description-project">
+                  <div className={styles.projectDescription}>
+                    <p className={styles.descriptionProject}>
                       A Mockup design implemented using HTML, SCSS.
                     </p>
                   </div>
                 </header>
                 <footer>
-                  <ul class="project-tech-list">
+                  <ul className={styles.projectTechList}>
                     <li>HTML</li>
                     <li>SCSS</li>
                     <li>Visual Studio Code</li>
@@ -1180,43 +999,24 @@ export default function Content() {
         </section>
         <section
           id="contact"
-          class="styled-contact-section"
-          style="
-            visibility: visible;
-            opacity: 1;
-            transform: matrix3d(
-                1,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                1
-            );
-            transition: opacity 0.5s
-                cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
-                transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
-            "
+          className="styled-contact-section"
+          style={{
+            visibility: 'visible',
+            opacity: 1,
+            transform: " matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,l) ",
+            transition:"opacity 0.5smcubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s"
+          }}
         >
-          <h2 class="numbered-heading overline">Lastly!</h2>
-          <h2 class="title">Get In Touch</h2>
-          <p style="font-size: 18px">
+          <h2 className="numberedHeading overline">Lastly!</h2>
+          <h2 className="title">Get In Touch</h2>
+          <p style={{fontSize: '18px'}}>
             I'm available on social networking sites and mostly active on Gmail,
             or LinkedIn. Whether it is just a question, or want to collaborate
             with me, or hire me, kindly drop me an email. I'll revert back to
             you as soon as possible.
           </p>
           <a
-            class="email-link"
+            className="email-link"
             href="mailto:officialbidisha1@gmail.com"
             rel="noopener noreferrer"
             target="_blank"
