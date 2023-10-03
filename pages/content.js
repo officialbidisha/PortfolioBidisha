@@ -29,6 +29,15 @@ export default function Content() {
                 Disney+Hotstar
               </a>
               <br/>
+              I also openly contribute to &nbsp;
+              <a href="https://github.com/shaka-project/shaka-player" 
+              target="_blank"
+              rel="noreferrer"
+              className= {styles.anchor}>
+                Shaka Player
+              </a> - a open-source JavaScript library used by Google for adaptive media.
+              <br/>
+              <br/>
               <br /> Previously, I was focused on web and mobile performance
               optimisation, building a fintech application (TripMoney), and
               revamping desktop-smooth workflow at &nbsp;
@@ -388,7 +397,7 @@ export default function Content() {
                 <div>
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
-                    <a href="https://github.com/officialbidisha/KanbanUI"  className={styles.anchor}>
+                    <a href="https://officialbidisha.github.io/KanbanUI/"  className={styles.anchor}>
                       Jira Clone
                     </a>
                   </h3>
@@ -399,7 +408,7 @@ export default function Content() {
                       based on keyword, member addition, issue edition and so
                       on. The project is available on
                       <a
-                        href="https://62fe7cef544c2510f724b3e7--stately-profiterole-f6c458.netlify.app/"
+                        href="https://github.com/officialbidisha/KanbanUI"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.anchor}
@@ -419,7 +428,7 @@ export default function Content() {
                   </ul>
                   <div className={styles.projectLinks}>
                     <a
-                      href="https://github.com/officialbidisha/Jira-Kanban"
+                      href="https://github.com/officialbidisha/KanbanUI"
                       aria-label="Github Link"
                       rel="noopener noreferrer"
                       target="_blank"
@@ -437,7 +446,7 @@ export default function Content() {
               </div>
               <div className={styles.projectImage}>
                 <a
-                  href="https://officialbidisha.github.io/Jira-Kanban/"
+                  href="https://officialbidisha.github.io/KanbanUI/"
                   rel="noopener noreferrer"
                   target="_blank"
                   className={styles.anchor}
