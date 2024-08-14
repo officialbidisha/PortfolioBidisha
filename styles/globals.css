@@ -200,3 +200,20 @@ img:not([alt]) {
   width: 100%;
   object-fit: cover;
 }
+
+
+/* Example for ensuring proper margins */
+section {
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Ensure body and html have no default margins */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
