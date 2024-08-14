@@ -217,3 +217,61 @@ body, html {
   width: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
+/* Media queries for screens smaller than 842px */
+@media (max-width: 842px) {
+  .main-container {
+      padding: 0 10px;
+  }
+
+  .sidebar {
+      display: none; /* Hide sidebar if present */
+  }
+
+  .content {
+      width: 100%; /* Ensure content takes full width */
+  }
+}
+
+/* Media queries for screens smaller than 768px */
+@media (max-width: 768px) {
+  .main-container {
+      padding: 0 5px;
+  }
+
+  .section {
+      padding: 15px;
+  }
+
+  .content {
+      width: 100%;
+  }
+
+  /* Adjust for specific layout needs */
+  .some-element {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* Media queries for screens smaller than 480px */
+@media (max-width: 480px) {
+  .main-container {
+      padding: 0 5px;
+  }
+
+  .section {
+      padding: 10px;
+  }
+
+  .content {
+      width: 100%;
+      font-size: 14px; /* Adjust font size for readability */
+  }
+
+  /* Adjust layout further for very small screens */
+  .another-element {
+      flex-direction: column;
+      align-items: center;
+  }
+}
