@@ -51,3 +51,35 @@
 .inlineBlock{
     display: inline-block !important;
 }
+
+/* Responsive adjustments for the left sidebar */
+@media (max-width: 768px) {
+    .sideStyledElementLeft {
+        position: static; /* Change position to static for normal flow on small screens */
+        width: 100%; /* Make the sidebar full width to fit on small screens */
+        bottom: auto; /* Reset bottom property */
+        left: auto; /* Reset left property */
+        right: auto; /* Reset right property */
+        z-index: auto; /* Reset z-index to default */
+        padding: 10px; /* Add padding for spacing */
+        margin-bottom: 10px; /* Add margin to separate from other content */
+        text-align: center; /* Center the social links */
+    }
+
+    .socialLinksStyledSidebar {
+        flex-direction: row; /* Change direction to row for horizontal alignment */
+        justify-content: center; /* Center align the social links */
+    }
+
+    .socialLinksStyledSidebar::after {
+        display: none; /* Hide the vertical line on smaller screens */
+    }
+
+    .socialLinksStyledSidebar li {
+        margin: 0 10px; /* Add horizontal margin for spacing */
+    }
+
+    .pagesStyledMainContainer.fillHeight {
+        padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+}
