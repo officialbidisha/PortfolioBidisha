@@ -561,3 +561,19 @@
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
+
+/* Ensure .project-description expands to fit the screen width */
+@media (max-width: 768px) {
+  .styledFeature {
+      grid-template-columns: 1fr; /* Full-width for smaller screens */
+  }
+
+  .styledFeature .projectImage {
+      display: none; /* Hide image on smaller screens */
+  }
+
+  .styledFeature .projectDescription {
+      min-width: 100%; /* Make description take full width */
+      padding: 20px; /* Add some padding if needed */
+  }
+}
