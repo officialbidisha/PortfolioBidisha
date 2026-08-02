@@ -174,6 +174,7 @@ h6 {
 section {
   margin: 0px auto;
   padding: 100px 10px;
+  width: 100%;
   max-width: 1000px;
 }
 img,
@@ -202,76 +203,19 @@ img:not([alt]) {
 }
 
 
-/* Example for ensuring proper margins */
-section {
-  padding: 20px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-}
-
-/* Ensure body and html have no default margins */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Media queries for screens smaller than 842px */
-@media (max-width: 842px) {
-  .main-container {
-      padding: 0 10px;
-  }
-
-  .sidebar {
-      display: none; /* Hide sidebar if present */
-  }
-
-  .content {
-      width: 100%; /* Ensure content takes full width */
-  }
-}
-
-/* Media queries for screens smaller than 768px */
+/* Responsive section spacing and base type scale */
 @media (max-width: 768px) {
-  .main-container {
-      padding: 0 5px;
-  }
-
-  .section {
-      padding: 15px;
-  }
-
-  .content {
-      width: 100%;
-  }
-
-  /* Adjust for specific layout needs */
-  .some-element {
-      flex-direction: column;
-      align-items: center;
+  section {
+    padding: 80px 10px;
   }
 }
 
-/* Media queries for screens smaller than 480px */
 @media (max-width: 480px) {
-  .main-container {
-      padding: 0 5px;
+  section {
+    padding: 60px 10px;
   }
 
-  .section {
-      padding: 10px;
-  }
-
-  .content {
-      width: 100%;
-      font-size: 14px; /* Adjust font size for readability */
-  }
-
-  /* Adjust layout further for very small screens */
-  .another-element {
-      flex-direction: column;
-      align-items: center;
+  body {
+    font-size: 16px;
   }
 }

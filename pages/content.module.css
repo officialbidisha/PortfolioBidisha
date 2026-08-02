@@ -562,8 +562,41 @@
   50% { border-color: orange }
 }
 
+/* Responsive layout adjustments */
+@media (max-width: 1080px) {
+  .pagesStylesMainContainer.fillHeight {
+    padding: 0px 80px;
+  }
+}
+
 /* Ensure .project-description expands to fit the screen width */
 @media (max-width: 768px) {
+  .pagesStylesMainContainer.fillHeight {
+    padding: 0px 40px;
+  }
+
+  .heroStyledHeroSection {
+    margin-top: 80px;
+  }
+
+  .aboutStyledAboutSection .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutStyledPic {
+    max-width: 220px;
+    margin: 40px auto 0px;
+  }
+
+  .aboutStyledText ul.skillsList {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .numberedHeading::after {
+    width: 100%;
+    max-width: 200px;
+  }
+
   .styledFeature {
       grid-template-columns: 1fr; /* Full-width for smaller screens */
   }
@@ -575,5 +608,35 @@
   .styledFeature .projectDescription {
       min-width: 100%; /* Make description take full width */
       padding: 20px; /* Add some padding if needed */
+  }
+
+  .styledFeature:nth-of-type(2n + 1) .projectContent {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .styledFeature:nth-of-type(2n + 1) .projectTechList,
+  .styledFeature:nth-of-type(2n + 1) .projectLinks {
+    justify-content: flex-start;
+    margin-left: -10px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagesStylesMainContainer.fillHeight {
+    padding: 0px 20px;
+  }
+
+  .aboutStyledText ul.skillsList {
+    grid-template-columns: 1fr;
+  }
+
+  .otherProjects .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .styledContactSection .title {
+    font-size: clamp(32px, 10vw, 48px);
   }
 }

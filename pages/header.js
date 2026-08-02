@@ -1,6 +1,18 @@
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./header.module.css";
+
+const navItems = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Work" },
+  { href: "#smallprojects", label: "Other Projects" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={`${styles.nav} ${styles.styledHeader}`}>
       <nav className={`${styles.nav} ${styles.styledNav}`}>
@@ -15,45 +27,44 @@ export default function Header() {
             />
           </a>
         </div>
-        <div className={`${styles.nav} ${styles.styledLinks}`}>
-          <ol>
-            <li
-              className={styles.facedownEnterDone}
-              style={{ transitionDelay: "0ms" }}
-            >
-              <a href="#about" className={styles.anchor}>
-                {" "}
-                About{" "}
-              </a>
-            </li>
 
-            <li
-              className={styles.facedownEnterDone}
-              style={{ transitionDelay: "200ms" }}
-            >
-              <a href="#projects" className={styles.anchor}>
-                {" "}
-                Work{" "}
-              </a>
-            </li>
-            <li
-              className={styles.facedownEnterDone}
-              style={{ transitionDelay: "100ms" }}
-            >
-              <a href="#smallprojects" className={styles.anchor}>
-                {" "}
-                Other Projects{" "}
-              </a>
-            </li>
-            <li
-              className={styles.facedownEnterDone}
-              style={{ transitionDelay: "300ms" }}
-            >
-              <a href="#contact" className={styles.anchor}>
-                {" "}
-                Contact{" "}
-              </a>
-            </li>
+        <button
+          className={styles.hamburgerButton}
+          aria-label="Menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <div className={styles.hamburgerBox}>
+            <div
+              className={`${styles.hamburgerInner} ${
+                menuOpen ? styles.hamburgerInnerOpen : ""
+              }`}
+            />
+          </div>
+        </button>
+
+        {menuOpen && (
+          <div className={styles.overlay} onClick={closeMenu} />
+        )}
+
+        <div
+          className={`${styles.nav} ${styles.styledLinks} ${
+            menuOpen ? styles.styledLinksOpen : ""
+          }`}
+        >
+          <ol>
+            {navItems.map(({ href, label }, i) => (
+              <li
+                key={href}
+                className={styles.facedownEnterDone}
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
+                <a href={href} className={styles.anchor} onClick={closeMenu}>
+                  {" "}
+                  {label}{" "}
+                </a>
+              </li>
+            ))}
             <li
               className={styles.facedownEnterDone}
               style={{ transitionDelay: "400ms" }}
@@ -63,6 +74,7 @@ export default function Header() {
                 href="./../assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={closeMenu}
               >
                 Resume
               </a>
