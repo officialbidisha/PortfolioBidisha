@@ -260,6 +260,175 @@ export default function Content() {
               </li>
             </ul>
           </div>
+          <div className={styles.experienceItem}>
+            <div className={styles.experienceHeader}>
+              <div>
+                <h3 className={styles.experienceRole}>
+                  Software Development Engineer - II{" "}
+                  <span className={styles.gradientText}>@ Disney+ Hotstar</span>
+                </h3>
+                <p className={styles.experienceMeta}>
+                  Bengaluru, Karnataka, India · Remote
+                </p>
+              </div>
+              <p className={styles.experienceRange}>Jan 2023 — Dec 2024</p>
+            </div>
+            <p className={styles.experienceIntro}>
+              Part of the Player Team, working across Web and Living Room
+              platforms to elevate streaming performance, reliability, and
+              user experience.
+            </p>
+            <ul className={styles.experienceStack}>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Shaka Player</li>
+              <li>JavaScript</li>
+              <li>Web Workers</li>
+              <li>Apple HLS</li>
+              <li>Amplitude</li>
+              <li>Microfrontends</li>
+              <li>Living Room Platforms</li>
+            </ul>
+            <ul className={styles.experienceList}>
+              <li>
+                Developed microfrontend architecture using React, Next.js,
+                and Shaka Player.
+              </li>
+              <li>
+                Contributed actively to the Shaka Player open-source project,
+                resolving timestamp issues that eliminated stream repetition
+                during the World Cup.
+              </li>
+              <li>
+                Reduced player failure rate by 70% by implementing a system
+                to dynamically blacklist decoding layers.
+              </li>
+              <li>
+                Enhanced startup performance on Living Room devices by
+                preloading manifests, parallelizing page rendering, and
+                preconnecting high-frequency DNS.
+              </li>
+              <li>
+                Built a singleton-based session tracking module to ensure
+                consistency across multi-device environments.
+              </li>
+              <li>
+                Designed a web worker-based playback reporting API to support
+                real-time multiplayer error tracking.
+              </li>
+              <li>
+                Optimized Time to Interactive (TTI) by 5ms on Living Room
+                platforms, improving responsiveness.
+              </li>
+              <li>
+                Implemented caption sync support for stitched ads using Apple
+                HLS, enabling closed captions across 50+ countries.
+              </li>
+            </ul>
+          </div>
+          <div className={styles.experienceItem}>
+            <div className={styles.experienceHeader}>
+              <div>
+                <h3 className={styles.experienceRole}>
+                  Senior Software Engineer{" "}
+                  <span className={styles.gradientText}>@ MakeMyTrip</span>
+                </h3>
+                <p className={styles.experienceMeta}>
+                  Bengaluru, Karnataka, India · Hybrid
+                </p>
+              </div>
+              <p className={styles.experienceRange}>Jun 2022 — Jan 2023</p>
+            </div>
+            <p className={styles.experienceIntro}>
+              Contributed to TripMoney, building web and mobile fintech
+              solutions across credit, loan, and forex journeys.
+            </p>
+            <ul className={styles.experienceStack}>
+              <li>React</li>
+              <li>Redux Thunk</li>
+              <li>Redux Saga</li>
+              <li>Web Components</li>
+              <li>Loadable Components</li>
+              <li>Webpack</li>
+              <li>Azure</li>
+              <li>Nginx</li>
+              <li>Charles Proxy</li>
+            </ul>
+            <ul className={styles.experienceList}>
+              <li>
+                Delivered travel and personal loan journeys using React,
+                Redux Thunk, and Web Components.
+              </li>
+              <li>
+                Built and integrated APIs with MVVM architecture, hosted on
+                Azure and blob storage.
+              </li>
+              <li>
+                Led frontend performance improvements — reduced LCP, FCP, and
+                TTFB across devices.
+              </li>
+              <li>
+                Cut bundle size using code-splitting, image compression,
+                sprite sheets, and Webpack optimizations.
+              </li>
+              <li>
+                Revamped the Forex Card experience across desktop and mWeb
+                using Redux Saga and Loadable Components.
+              </li>
+            </ul>
+          </div>
+          <div className={styles.experienceItem}>
+            <div className={styles.experienceHeader}>
+              <div>
+                <h3 className={styles.experienceRole}>
+                  Software Developer{" "}
+                  <span className={styles.gradientText}>@ AutoRABIT</span>
+                </h3>
+                <p className={styles.experienceMeta}>
+                  Hyderabad, Telangana, India · On-site
+                </p>
+              </div>
+              <p className={styles.experienceRange}>Sep 2020 — Jun 2022</p>
+            </div>
+            <p className={styles.experienceIntro}>
+              Worked on frontend platform tooling and reusable UI systems to
+              support large-scale DevOps and CRM automation products.
+            </p>
+            <ul className={styles.experienceStack}>
+              <li>Angular</li>
+              <li>PrimeNG</li>
+              <li>NgRx</li>
+              <li>Vue</li>
+              <li>GraphQL</li>
+              <li>Docker</li>
+              <li>AWS</li>
+              <li>Web Components</li>
+              <li>Nginx</li>
+              <li>Node.js</li>
+            </ul>
+            <ul className={styles.experienceList}>
+              <li>
+                Worked on frontend infrastructure and enterprise tools in the
+                DevOps and CRM automation space.
+              </li>
+              <li>
+                Built a design system using Angular, PrimeNG, NgRx, and Web
+                Components in a micro-frontend setup.
+              </li>
+              <li>
+                Developed Progressive Web App (PWA) techniques with cache
+                busting, lazy loading, and webpack tweaks.
+              </li>
+              <li>
+                Delivered a Configure Price Quote (CPQ) system using Vue,
+                GraphQL, and Docker, contributing to a ~$2M revenue impact.
+              </li>
+              <li>
+                Optimized the UI layer for ARM deployments on AWS, improving
+                load times and accessibility.
+              </li>
+            </ul>
+          </div>
         </section>
         <section id="projects">
           <h2 className={styles.numberedHeading} data-sr-id="3">
@@ -294,6 +463,14 @@ export default function Content() {
                         className={styles.anchor}
                       >
                         LangChain deep-dive repo
+                      </a>. Try the &nbsp;
+                      <a
+                        href="https://langchain-in-depth-digfvqjd6fgs49fnttew3f.streamlit.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.anchor}
+                      >
+                        live demo
                       </a>.
                     </p>
                   </div>
@@ -319,12 +496,26 @@ export default function Content() {
                         style={{filter: 'unset'}}
                       />
                     </a>
+                    <a
+                      href="https://langchain-in-depth-digfvqjd6fgs49fnttew3f.streamlit.app/"
+                      aria-label="Live Demo Link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className={styles.anchor}
+                    >
+                      <Image
+                        src="/images/icons8-share-3.svg"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
               <div className={styles.projectImage}>
                 <a
-                  href="https://github.com/officialbidisha/Langchain-In-Depth"
+                  href="https://langchain-in-depth-digfvqjd6fgs49fnttew3f.streamlit.app/"
                   rel="noopener noreferrer"
                   target="_blank"
                   className={styles.anchor}
