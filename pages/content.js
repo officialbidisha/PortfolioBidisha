@@ -1037,6 +1037,69 @@ export default function Content() {
                 </footer>
               </div>
             </li>
+            <li
+              className={`${styles.styledProject} ${styles.sectionStyle} ${styles.allTransition}`}
+            >
+              <div className={styles.projectInner}>
+                <header>
+                  <div className={styles.projectTop}>
+                    <div className={styles.folder}>
+                      <Image
+                       src="/images/icons8-folder.svg"
+                       width={25}
+                       height={25}
+                       style={{filter:'unset'}}
+                      />
+                    </div>
+                    <div className={styles.projectLinks}>
+                      <a
+                        href="https://github.com/officialbidisha/Langchain-In-Depth"
+                        aria-label="Extenal link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${styles.external} ${styles.anchor}`}
+                      >
+                        <Image
+                         src="/images/icons8-share-3.svg"
+                         width={22}
+                         height={22}
+                          style={{
+                            marginTop:'-4px',
+                            filter: 'unset'
+                          }}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <h3 className={styles.projectTitle}>
+                    <a
+                      href="https://github.com/officialbidisha/Langchain-In-Depth"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${styles.otherProjectA} ${styles.anchor}`}
+                    >
+                      LangChain Documentation Helper — a RAG chatbot over the LangChain docs
+                    </a>
+                  </h3>
+                  <div className={styles.projectDescription}>
+                    <p className={styles.descriptionProject}>
+                      A retrieval-augmented generation chatbot that answers questions about
+                      the LangChain documentation, with a Streamlit chat UI, LangChain/LangGraph
+                      agent for retrieval, and a Pinecone vector store.
+                    </p>
+                  </div>
+                </header>
+                <footer>
+                  <ul className={styles.projectTechList}>
+                    <li>LangChain</li>
+                    <li>LangGraph</li>
+                    <li>Pinecone</li>
+                    <li>OpenAI</li>
+                    <li>Streamlit</li>
+                  </ul>
+                </footer>
+              </div>
+            </li>
           </ul>
         </section>
         <section
