@@ -40,20 +40,20 @@ button {
 * Colors
 */
 :root {
-  --dark-navy: #020c1b;
-  --navy: #0a192f;
-  --light-navy: #112240;
-  --lightest-navy: #233554;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
-  --dark-slate: #495670;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --green-tint: rgba(100, 255, 218, 0.1);
-  --pink: #f57dff;
-  --blue: #57cbff;
+  --dark-navy: #120d09;
+  --navy: #1a1410;
+  --light-navy: #241c15;
+  --lightest-navy: #3a2c1f;
+  --navy-shadow: rgba(10, 7, 4, 0.7);
+  --dark-slate: #5a4a38;
+  --slate: #b0a08a;
+  --light-slate: #d3c2aa;
+  --lightest-slate: #f2e6d3;
+  --white: #f7efe0;
+  --green: #f5b64c;
+  --green-tint: rgba(245, 182, 76, 0.1);
+  --pink: #d9573b;
+  --blue: #e8833a;
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   --font-mono: "Roboto Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --fz-xxs: 12px;
@@ -103,12 +103,12 @@ body::-webkit-scrollbar {
   width: 12px;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #495670;
-  border: 3px solid #0a192f;
+  background-color: #5a4a38;
+  border: 3px solid #1a1410;
   border-radius: 10px;
 }
 body::-webkit-scrollbar-track {
-  background: #0a192f;
+  background: #1a1410;
 }
 body,
 html {
@@ -123,8 +123,8 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background-color: #0a192f;
-  color: #8892b0;
+  background-color: #1a1410;
+  color: #b0a08a;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
   font-size: 20px;
   line-height: 1.3;
@@ -137,9 +137,9 @@ body {
   grid-template-columns: 100%;
 }
 .skip-to-content {
-  color: #64ffda;
+  color: #f5b64c;
   background-color: transparent;
-  border: 1px solid #64ffda;
+  border: 1px solid #f5b64c;
   border-radius: 4px;
   font-size: 13px;
   font-family: "Roboto Mono", "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
@@ -168,7 +168,7 @@ h5,
 h6 {
   margin: 0px 0px 10px;
   font-weight: 600;
-  color: #ccd6f6;
+  color: #f2e6d3;
   line-height: 1.1;
 }
 section {

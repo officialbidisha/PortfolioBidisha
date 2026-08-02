@@ -37,9 +37,10 @@
   right: -150px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(100, 255, 218, 0.12) 0%, rgba(100, 255, 218, 0) 70%);
+  background: radial-gradient(circle, rgba(245, 182, 76, 0.12) 0%, rgba(245, 182, 76, 0) 70%);
   z-index: -1;
   pointer-events: none;
+  animation: driftGlowA 14s ease-in-out infinite;
 }
 .heroStyledHeroSection::after {
   content: "";
@@ -48,13 +49,28 @@
   left: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(245, 125, 255, 0.1) 0%, rgba(245, 125, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(217, 87, 59, 0.1) 0%, rgba(217, 87, 59, 0) 70%);
   z-index: -1;
   pointer-events: none;
+  animation: driftGlowB 16s ease-in-out infinite;
+}
+@keyframes driftGlowA {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-20px, 25px, 0) scale(1.08); }
+}
+@keyframes driftGlowB {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(20px, -20px, 0) scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heroStyledHeroSection::before,
+  .heroStyledHeroSection::after {
+    animation: none;
+  }
 }
 .heroStyledHeroSection h1 {
   margin: 0px 0px 30px 4px;
-  color: #64ffda;;
+  color: #f5b64c;;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;;
   font-size: clamp(14px, 5vw, 16px);
   font-weight: 400;
@@ -64,16 +80,16 @@
   align-items: center;
   margin: 0px 0px 20px;
   padding: 8px 16px;
-  border: 1px solid #233554;
+  border: 1px solid #3a2c1f;
   border-radius: 999px;
-  background-color: rgba(100, 255, 218, 0.05);
+  background-color: rgba(245, 182, 76, 0.05);
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 14px;
-  color: #ccd6f6;
+  color: #f2e6d3;
   width: fit-content;
 }
 .gradientText {
-  background: linear-gradient(90deg, #64ffda 0%, #57cbff 55%, #f57dff 100%);
+  background: linear-gradient(90deg, #f5b64c 0%, #e8833a 55%, #d9573b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -88,7 +104,7 @@
   text-decoration-skip-ink: auto;
   position: relative;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: #64ffda;;
+  color: #f5b64c;;
 }
 
 .numberedHeading {
@@ -107,7 +123,7 @@
   counter-increment: section 1;
   content: "0" counter(section) ".";
   margin-right: 10px;
-  color: #64ffda;;
+  color: #f5b64c;;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;;
   font-size: clamp(16px, 3vw, 20px);
   font-weight: 400;
@@ -120,13 +136,13 @@
   width: 300px;
   height: 1px;
   margin-left: 20px;
-  background: linear-gradient(90deg, #64ffda, #57cbff, transparent);
+  background: linear-gradient(90deg, #f5b64c, #e8833a, transparent);
 }
 
 .bigHeading {
   margin: 0px;
   font-size: clamp(40px, 8vw, 80px);
-  background: linear-gradient(90deg, #ccd6f6 0%, #64ffda 55%, #57cbff 100%);
+  background: linear-gradient(90deg, #f2e6d3 0%, #f5b64c 55%, #e8833a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -173,7 +189,7 @@
   content: "▹";
   position: absolute;
   left: 0px;
-  color: #64ffda;;
+  color: #f5b64c;;
   font-size: 14px;
   line-height: 12px;
 }
@@ -181,16 +197,21 @@
 .aboutStyledPic {
   position: relative;
   max-width: 300px;
+  perspective: 800px;
 }
 
 .aboutStyledPic .wrapper {
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7), 0 0 45px -10px rgba(87, 203, 255, 0.4);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 10px 30px -15px rgba(10, 7, 4, 0.7), 0 0 45px -10px rgba(232, 131, 58, 0.4);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   display: block;
   position: relative;
   width: 100%;
   border-radius: 4px;
-  background: linear-gradient(135deg, #64ffda, #57cbff);
+  background: linear-gradient(135deg, #f5b64c, #e8833a);
+}
+.aboutStyledPic .wrapper:hover {
+  transform: rotateY(-6deg) rotateX(3deg) translateZ(10px);
+  box-shadow: 0 20px 45px -15px rgba(10, 7, 4, 0.8), 0 0 55px -8px rgba(232, 131, 58, 0.55);
 }
 .imageWrapper {
   overflow: hidden;
@@ -214,13 +235,13 @@
   content: "";
   top: 0px;
   left: 0px;
-  background-color: #0a192f;
+  background-color: #1a1410;
   mix-blend-mode: screen;
 }
 
 .aboutStyledPic .wrapper::after {
   content: "";
-  border: 2px solid #64ffda;;
+  border: 2px solid #f5b64c;;
   top: 20px;
   left: 20px;
   z-index: -1;
@@ -262,6 +283,7 @@
   grid-template-columns: repeat(12, 1fr);
   -webkit-box-align: center;
   align-items: center;
+  perspective: 1000px;
 }
 .styledFeature .projectContent {
   position: relative;
@@ -269,7 +291,7 @@
 }
 .styledFeature .projecOverline {
   margin: 10px 0px;
-  color: #64ffda;;
+  color: #f5b64c;;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;;
   font-size: 13px;
   font-weight: 400;
@@ -282,14 +304,14 @@
   z-index: 1;
 }
 .styledFeature .projectDescription {
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  box-shadow: 0 10px 30px -15px rgba(10, 7, 4, 0.7);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
   z-index: 2;
   padding: 25px;
   border-radius: 4px;
-  background-color: #112240;
-  color: #a8b2d1;
+  background-color: #241c15;
+  color: #d3c2aa;
   font-size: 18px;
 }
 .styledFeature .projectDescription a {
@@ -298,7 +320,7 @@
   text-decoration-skip-ink: auto;
   position: relative;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  color: #64ffda;;
+  color: #f5b64c;;
 }
 .styledFeature .projectDescription a::after {
   content: "";
@@ -307,7 +329,7 @@
   height: 1px;
   position: relative;
   bottom: 0.37em;
-  background-color: #64ffda;;
+  background-color: #f5b64c;;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0.5;
 }
@@ -326,7 +348,7 @@
 }
 .styledFeature .projectTechList li {
   margin: 0px 20px 5px 0px;
-  color: #a8b2d1;
+  color: #d3c2aa;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;;
   font-size: 13px;
   white-space: nowrap;
@@ -351,7 +373,7 @@
   position: relative;
   margin-top: 10px;
   margin-left: -10px;
-  color: #ccd6f6;
+  color: #f2e6d3;
 }
 
 .styledFeature .projectLinks a {
@@ -367,16 +389,27 @@
   grid-column: 1/8;
 }
 .styledFeature .projectImage {
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 20px 40px -15px rgba(10, 7, 4, 0.8), 0 0 0 1px rgba(245, 182, 76, 0.08);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-style: preserve-3d;
   grid-area: 1 / 6 / -1 / -1;
   position: relative;
   z-index: 1;
 }
+.styledFeature:hover .projectImage {
+  transform: rotateY(-4deg) rotateX(2deg) translateZ(10px) scale(1.02);
+  box-shadow: 0 30px 60px -20px rgba(10, 7, 4, 0.9), 0 0 45px -10px rgba(245, 182, 76, 0.35);
+}
+.styledFeature .projectContent {
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.styledFeature:hover .projectContent {
+  transform: translateZ(20px);
+}
 .styledFeature .projectImage a {
   width: 100%;
   height: 100%;
-  background-color: #64ffda;;
+  background-color: #f5b64c;;
   border-radius: 4px;
   vertical-align: middle;
 }
@@ -388,7 +421,7 @@
   inset: 0px;
   z-index: 3;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-color: #0a192f;
+  background-color: #1a1410;
   mix-blend-mode: screen;
 }
 
@@ -421,6 +454,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
   position: relative;
+  perspective: 1000px;
 }
 
 .otherProjects .projectsGrid .styledProject {
@@ -428,7 +462,7 @@
   cursor: default;
 }
 .styledProject .projectInner {
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  box-shadow: 0 10px 30px -15px rgba(10, 7, 4, 0.7);
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
@@ -439,8 +473,12 @@
   height: 100%;
   padding: 2rem 1.75rem;
   border-radius: 4px;
-  background-color: #112240;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: #241c15;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.styledProject .projectInner:hover {
+  transform: translateY(-8px) rotateX(3deg) rotateY(-2deg) scale(1.02);
+  box-shadow: 0 25px 50px -20px rgba(10, 7, 4, 0.85), 0 0 40px -12px rgba(245, 182, 76, 0.3);
 }
 
 .styledProject .projectTop {
@@ -453,14 +491,14 @@
 }
 
 .styledProject .projectTop .folder {
-  color: #64ffda;;
+  color: #f5b64c;;
 }
 .styledProject .projectTop .projectLinks {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
   margin-right: -10px;
-  color: #a8b2d1;
+  color: #d3c2aa;
 }
 .styledProject .projectTop .projectLinks a {
   display: flex;
@@ -472,7 +510,7 @@
 }
 .styledProject .projecTitle {
   margin: 0px 0px 10px;
-  color: #ccd6f6;
+  color: #f2e6d3;
   font-size: 22px;
 }
 .styledProject .projecTitle a {
@@ -489,7 +527,7 @@
   left: 0px;
 }
 .styledProject .projectDescription {
-  color: #a8b2d1;
+  color: #d3c2aa;
   font-size: 17px;
 }
 
@@ -535,7 +573,7 @@
   left: 0px;
   right: 0px;
   height: 3px;
-  background: linear-gradient(90deg, #64ffda, #57cbff, #f57dff);
+  background: linear-gradient(90deg, #f5b64c, #e8833a, #d9573b);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -554,13 +592,25 @@
 /*
   * Experience
   */
+.experienceSection {
+  perspective: 1200px;
+}
 .experienceItem {
   position: relative;
   padding: 30px 40px 30px 45px;
   border-radius: 8px;
-  background-color: #112240;
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  background-color: #241c15;
+  box-shadow: 0 10px 30px -15px rgba(10, 7, 4, 0.7);
   overflow: hidden;
+  margin-bottom: 30px;
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.experienceItem:last-of-type {
+  margin-bottom: 0;
+}
+.experienceItem:hover {
+  transform: translateY(-6px) rotateX(1.5deg);
+  box-shadow: 0 25px 50px -20px rgba(10, 7, 4, 0.85), 0 0 40px -14px rgba(245, 182, 76, 0.3);
 }
 
 .experienceItem::before {
@@ -570,7 +620,7 @@
   left: 0px;
   bottom: 0px;
   width: 4px;
-  background: linear-gradient(180deg, #64ffda, #57cbff, #f57dff);
+  background: linear-gradient(180deg, #f5b64c, #e8833a, #d9573b);
 }
 
 .experienceHeader {
@@ -584,20 +634,20 @@
 
 .experienceRole {
   margin: 0px 0px 5px;
-  color: #ccd6f6;
+  color: #f2e6d3;
   font-size: 22px;
 }
 
 .experienceMeta {
   margin: 0px;
-  color: #8892b0;
+  color: #b0a08a;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 13px;
 }
 
 .experienceRange {
   margin: 0px;
-  color: #64ffda;
+  color: #f5b64c;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 13px;
   white-space: nowrap;
@@ -605,7 +655,7 @@
 
 .experienceIntro {
   margin: 15px 0px;
-  color: #a8b2d1;
+  color: #d3c2aa;
 }
 
 .experienceStack {
@@ -620,9 +670,9 @@
 .experienceStack li {
   padding: 4px 10px;
   border-radius: 4px;
-  background: rgba(100, 255, 218, 0.08);
-  border: 1px solid rgba(100, 255, 218, 0.25);
-  color: #64ffda;
+  background: rgba(245, 182, 76, 0.08);
+  border: 1px solid rgba(245, 182, 76, 0.25);
+  color: #f5b64c;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 12px;
   white-space: nowrap;
@@ -638,7 +688,7 @@
   position: relative;
   padding-left: 25px;
   margin-bottom: 15px;
-  color: #a8b2d1;
+  color: #d3c2aa;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -647,7 +697,7 @@
   content: "▹";
   position: absolute;
   left: 0px;
-  color: #64ffda;
+  color: #f5b64c;
 }
 
 .facedown-enter-done {
@@ -669,7 +719,7 @@
 .styledContactSection .overline {
   display: block;
   margin-bottom: 20px;
-  color: #64ffda;;
+  color: #f5b64c;;
   font-family: 'Roboto Mono', "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;;
   font-size: 16px;
   font-weight: 400;
@@ -685,9 +735,9 @@
   font-size: clamp(40px, 5vw, 60px);
 }
 .styledContactSection .emailLink {
-  color: #64ffda;;
+  color: #f5b64c;;
   background-color: transparent;
-  border: 1px solid #64ffda;;
+  border: 1px solid #f5b64c;;
   border-radius: 4px;
   padding: 1.25rem 1.75rem;
   font-size: 14px;
@@ -700,9 +750,9 @@
 }
 .styledContactSection .emailLink:hover,
 .styledContactSection .emailLink:focus {
-  background: linear-gradient(90deg, #64ffda, #57cbff);
-  color: #0a192f;
-  box-shadow: 0 8px 20px -8px rgba(100, 255, 218, 0.5);
+  background: linear-gradient(90deg, #f5b64c, #e8833a);
+  color: #1a1410;
+  box-shadow: 0 8px 20px -8px rgba(245, 182, 76, 0.5);
 }
 .anchor {
   display: inline-block;
