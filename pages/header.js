@@ -4,6 +4,7 @@ import styles from "./header.module.css";
 
 const navItems = [
   { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Work" },
   { href: "#smallprojects", label: "Other Projects" },
   { href: "#contact", label: "Contact" },
@@ -71,7 +72,7 @@ export default function Header() {
             >
               <a
                 className={`${styles.resumeButton} ${styles.anchor}`}
-                href="./../assets/resume.pdf"
+                href="https://drive.google.com/file/d/1sUoRQZpmgTUtONFiWQ9l2x7erPVdmtOA/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}

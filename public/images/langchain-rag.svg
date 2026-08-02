@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" role="img" aria-labelledby="title">
+  <title id="title">LangChain Documentation Helper — RAG chatbot preview</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#112240"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64ffda"/>
+      <stop offset="55%" stop-color="#57cbff"/>
+      <stop offset="100%" stop-color="#f57dff"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#64ffda" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#64ffda" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f57dff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f57dff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="220" fill="url(#glow1)"/>
+  <circle cx="800" cy="480" r="240" fill="url(#glow2)"/>
+
+  <rect x="0" y="0" width="900" height="6" fill="url(#accent)"/>
+
+  <g transform="translate(90,150)" font-family="Roboto Mono, SF Mono, Fira Code, monospace">
+    <text x="0" y="0" fill="#64ffda" font-size="16">$ streamlit run app.py</text>
+    <text x="0" y="40" fill="#ccd6f6" font-size="34" font-weight="600">LangChain Documentation</text>
+    <text x="0" y="82" fill="#ccd6f6" font-size="34" font-weight="600">Helper</text>
+    <text x="0" y="128" fill="#8892b0" font-size="18">Retrieval-Augmented Generation over the LangChain docs</text>
+  </g>
+
+  <g transform="translate(90,320)">
+    <rect x="0" y="0" width="620" height="60" rx="8" fill="#0a192f" stroke="#233554"/>
+    <text x="20" y="37" fill="#a8b2d1" font-family="Roboto Mono, SF Mono, monospace" font-size="16">What is a retrieval-to-action architecture?</text>
+
+    <rect x="60" y="80" width="660" height="90" rx="8" fill="#112240"/>
+    <text x="90" y="112" fill="#64ffda" font-family="Roboto Mono, SF Mono, monospace" font-size="13">RAG Agent</text>
+    <text x="90" y="138" fill="#ccd6f6" font-size="15">Retrieves grounded context from a Pinecone vector store,</text>
+    <text x="90" y="160" fill="#ccd6f6" font-size="15">then reasons over it with a LangGraph tool-calling agent.</text>
+  </g>
+
+  <g transform="translate(90,460)" font-family="Roboto Mono, SF Mono, monospace" font-size="13" fill="#8892b0">
+    <text x="0" y="0">LangChain</text>
+    <text x="110" y="0">LangGraph</text>
+    <text x="230" y="0">Pinecone</text>
+    <text x="330" y="0">OpenAI</text>
+    <text x="420" y="0">Streamlit</text>
+  </g>
+</svg>

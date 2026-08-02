@@ -11,6 +11,11 @@ export default function Content() {
           <div  style={{transitionDelay: '300ms'}}>
             <h2 className={styles.bigHeading}>Bidisha Das</h2>
           </div>
+          <div style={{ transitionDelay: '350ms' }}>
+            <p className={styles.heroTagline}>
+              Currently building Platform <span className={styles.gradientText}>@ Salesforce</span>
+            </p>
+          </div>
           <div  style={{transitionDelay: '400ms'}}>
             <p>
               I'm a software developer specializing in building and developing
@@ -19,18 +24,17 @@ export default function Content() {
               flexible.
               <br/>
               <br/>
-              Currently, I'm focused on ensuring seamless streaming experience by contributing to the Player Team at &nbsp;
-              <a
-                href="https://hotstar.com/"
-                target="_blank"
-                rel="norefferer"
-                className={styles.anchor}
-              >
-                Disney+Hotstar
-              </a>
+              Currently, I'm focused on Salesforce-native Agentic AI and
+              Retrieval-Augmented Generation (RAG) — crafting intelligent,
+              context-aware systems that elevate user workflows and strengthen
+              platform intelligence. See the &nbsp;
+              <a href="#experience" className={styles.anchor}>
+                Experience
+              </a> section below for details.
+              <br/>
               <br/>
               I also openly contribute to &nbsp;
-              <a href="https://github.com/shaka-project/shaka-player" 
+              <a href="https://github.com/shaka-project/shaka-player"
               target="_blank"
               rel="noreferrer"
               className= {styles.anchor}>
@@ -38,27 +42,34 @@ export default function Content() {
               </a> - a open-source JavaScript library used by Google for adaptive media.
               <br/>
               <br/>
-              <br /> Previously, I was focused on web and mobile performance
-              optimisation, building a fintech application (TripMoney), and
-              revamping desktop-smooth workflow at &nbsp;
+              <br /> Previously, I contributed to the Player Team at &nbsp;
+              <a
+                href="https://hotstar.com/"
+                target="_blank"
+                rel="norefferer"
+                className={styles.anchor}
+              >
+                Disney+Hotstar
+              </a>, ensuring seamless streaming experiences; worked on web and
+              mobile performance optimisation and a fintech application
+              (TripMoney) at &nbsp;
               <a
                 href="https://makemytrip.com/"
                 target="_blank"
                 rel="norefferer"
                 className={styles.anchor}
               >
-                MakeMyTrip.
-              </a>
-              <br/>
-              <br/>
-              I had also worked with               <a
+                MakeMyTrip
+              </a>; and built a scalable Design System for organisation-level
+              consumption at &nbsp;
+              <a
                 href="https://autorabit.com/"
                 target="_blank"
                 rel="norefferer"
                 className={styles.anchor}
               >
                 AutoRABIT
-              </a> to build a scalable Design System for organisation level consumption.
+              </a>.
             </p>
           </div>
         </section>
@@ -167,11 +178,167 @@ export default function Content() {
             </div>
           </div>
         </section>
+        <section id="experience" className={styles.experienceSection}>
+          <h2 className={styles.numberedHeading}>Where I've Worked</h2>
+          <div className={styles.experienceItem}>
+            <div className={styles.experienceHeader}>
+              <div>
+                <h3 className={styles.experienceRole}>
+                  Senior Member of Technical Staff{" "}
+                  <span className={styles.gradientText}>@ Salesforce</span>
+                </h3>
+                <p className={styles.experienceMeta}>Bengaluru, India</p>
+              </div>
+              <p className={styles.experienceRange}>Dec 2024 — Present</p>
+            </div>
+            <p className={styles.experienceIntro}>
+              Currently building Platform @ Salesforce, where I focus on
+              Salesforce-native Agentic AI and Retrieval-Augmented Generation
+              (RAG) — crafting intelligent, context-aware systems that elevate
+              user workflows and strengthen platform intelligence.
+            </p>
+            <ul className={styles.experienceStack}>
+              <li>Agentforce Skills</li>
+              <li>Headless 360</li>
+              <li>MCP</li>
+              <li>Java</li>
+              <li>Spring</li>
+              <li>TypeScript</li>
+              <li>REST APIs</li>
+              <li>Metadata API</li>
+              <li>Tooling API</li>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>Event Streaming</li>
+              <li>Splunk</li>
+              <li>CI/CD</li>
+            </ul>
+            <ul className={styles.experienceList}>
+              <li>
+                Own architecture and delivery of five production AI agent
+                workflows for enterprise access management, cutting a process
+                that previously took ~60 days of manual work to ~5 days of
+                self-serve execution — a ~92% reduction in turnaround time.
+              </li>
+              <li>
+                Extend the in-house Agentforce integration platform with a
+                retrieval-to-action architecture — natural-language requests
+                retrieve versioned Skills, enterprise metadata grounds the
+                plan, and permission-aware tools execute structured operations
+                — enabling 10+ teams to self-serve.
+              </li>
+              <li>
+                Migrated five workflows from a legacy V1 retrieval-driven
+                architecture to the redesigned V2 platform, consolidating 20+
+                prompts, permissions, tool definitions, and structured outputs
+                while improving execution reliability.
+              </li>
+              <li>
+                Build governed REST API integrations and agent tool routing
+                across roles, groups, queues, sharing configurations, and
+                access policies via Metadata API and Tooling API, with schema
+                validation and operation-level controls reducing
+                misconfigured access requests by ~35%.
+              </li>
+              <li>
+                Onboarded eight enterprise capabilities to Headless 360 (API
+                exposure, tool discovery, metadata grounding, reusable
+                Skills, MCP execution); authored reusable integration
+                guidance adopted by 10+ internal teams.
+              </li>
+              <li>
+                Deployed and operated agent and integration services on AWS
+                using Docker containerization and Kubernetes orchestration;
+                built event-driven, data-streaming integrations to decouple
+                workflows from downstream systems, improving throughput by
+                ~40% and strengthening fault isolation.
+              </li>
+              <li>
+                Mentor 5+ junior engineers and contractors through code
+                reviews, design reviews, and architecture discussions.
+              </li>
+            </ul>
+          </div>
+        </section>
         <section id="projects">
           <h2 className={styles.numberedHeading} data-sr-id="3">
             Some Things I've Built
           </h2>
           <ul className={styles.styledProjectsFeatured}>
+            <li
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
+            >
+              <div className={styles.projectContent}>
+                <div>
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
+                    <a
+                      href="https://github.com/officialbidisha/Langchain-In-Depth"
+                      className={styles.anchor}
+                    >
+                      LangChain Documentation Helper
+                    </a>
+                  </h3>
+                  <div className={styles.projectDescription}>
+                    <p>
+                      A retrieval-augmented generation (RAG) chatbot that
+                      answers questions about the LangChain docs, built with a
+                      Streamlit chat UI on top of a LangGraph tool-calling
+                      agent that retrieves grounded context from a Pinecone
+                      vector store. Part of my &nbsp;
+                      <a
+                        href="https://github.com/officialbidisha/Langchain-In-Depth"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.anchor}
+                      >
+                        LangChain deep-dive repo
+                      </a>.
+                    </p>
+                  </div>
+                  <ul className={styles.projectTechList}>
+                    <li>LangChain</li>
+                    <li>LangGraph</li>
+                    <li>Pinecone</li>
+                    <li>OpenAI</li>
+                    <li>Streamlit</li>
+                  </ul>
+                  <div className={styles.projectLinks}>
+                    <a
+                      href="https://github.com/officialbidisha/Langchain-In-Depth"
+                      aria-label="Github Link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className={styles.anchor}
+                    >
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.projectImage}>
+                <a
+                  href="https://github.com/officialbidisha/Langchain-In-Depth"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className={styles.anchor}
+                  style={{height: 'auto'}}
+                >
+                  <img
+                    decoding="async"
+                    src="/images/langchain-rag.svg"
+                    alt="LangChain Documentation Helper preview"
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto', width: '100%'}}
+                  />
+                </a>
+              </div>
+            </li>
             <li
               className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
@@ -1033,69 +1200,6 @@ export default function Content() {
                     <li>HTML</li>
                     <li>SCSS</li>
                     <li>Visual Studio Code</li>
-                  </ul>
-                </footer>
-              </div>
-            </li>
-            <li
-              className={`${styles.styledProject} ${styles.sectionStyle} ${styles.allTransition}`}
-            >
-              <div className={styles.projectInner}>
-                <header>
-                  <div className={styles.projectTop}>
-                    <div className={styles.folder}>
-                      <Image
-                       src="/images/icons8-folder.svg"
-                       width={25}
-                       height={25}
-                       style={{filter:'unset'}}
-                      />
-                    </div>
-                    <div className={styles.projectLinks}>
-                      <a
-                        href="https://github.com/officialbidisha/Langchain-In-Depth"
-                        aria-label="Extenal link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`${styles.external} ${styles.anchor}`}
-                      >
-                        <Image
-                         src="/images/icons8-share-3.svg"
-                         width={22}
-                         height={22}
-                          style={{
-                            marginTop:'-4px',
-                            filter: 'unset'
-                          }}
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <h3 className={styles.projectTitle}>
-                    <a
-                      href="https://github.com/officialbidisha/Langchain-In-Depth"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`${styles.otherProjectA} ${styles.anchor}`}
-                    >
-                      LangChain Documentation Helper — a RAG chatbot over the LangChain docs
-                    </a>
-                  </h3>
-                  <div className={styles.projectDescription}>
-                    <p className={styles.descriptionProject}>
-                      A retrieval-augmented generation chatbot that answers questions about
-                      the LangChain documentation, with a Streamlit chat UI, LangChain/LangGraph
-                      agent for retrieval, and a Pinecone vector store.
-                    </p>
-                  </div>
-                </header>
-                <footer>
-                  <ul className={styles.projectTechList}>
-                    <li>LangChain</li>
-                    <li>LangGraph</li>
-                    <li>Pinecone</li>
-                    <li>OpenAI</li>
-                    <li>Streamlit</li>
                   </ul>
                 </footer>
               </div>
