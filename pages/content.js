@@ -13,7 +13,15 @@ export default function Content() {
           </div>
           <div style={{ transitionDelay: '350ms' }}>
             <p className={styles.heroTagline}>
-              Currently building Platform <span className={styles.gradientText}>@ Salesforce</span>
+              Currently building Platform{" "}
+              <a
+                href="https://www.salesforce.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.gradientText}
+              >
+                @ Salesforce
+              </a>
             </p>
           </div>
           <div  style={{transitionDelay: '400ms'}}>
@@ -135,44 +143,14 @@ export default function Content() {
             <div className={styles.aboutStyledPic}>
               <div className={styles.wrapper}>
                 <div className={`${styles.imageWrapper} ${styles.img}`}>
-                  <div style={{maxWidth: '500px', display: 'block'}}>
-                    <Image
-                      alt
-                      role="presentation"
-                      aria-hidden="true"
-                     src="/images/transparent.jpg"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      style={{
-                        maxWidth: '100%',
-                        display: 'block',
-                        position: 'static',
-                      }}
-                    />
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    style={{
-                        opacity: 0,
-                        transition:'opacity 500ms linear 0s',
-                        backgroundColor: 'rgb(232, 232, 232)',
-                        position: 'absolute',
-                        inset: '0px',
-                        objectFit: 'cover'
-                    }}
-                  ></div>
-                  <picture>
-                    <Image
-                      width={500}
-                      height={500}
-                      sizes="(min-width:500px) 500px, 100vw"
-                      decoding="async"
-                      src="/images/1.jpg"
-                      alt="Headshot"
-                    />
-                  </picture>
-                  <noscript></noscript>
+                  <Image
+                    className={styles.headshotImg}
+                    width={500}
+                    height={500}
+                    sizes="(min-width: 768px) 300px, 220px"
+                    src="/images/1.jpg"
+                    alt="Headshot"
+                  />
                 </div>
               </div>
             </div>
@@ -185,7 +163,14 @@ export default function Content() {
               <div>
                 <h3 className={styles.experienceRole}>
                   Senior Member of Technical Staff{" "}
-                  <span className={styles.gradientText}>@ Salesforce</span>
+                  <a
+                    href="https://www.salesforce.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.gradientText}
+                  >
+                    @ Salesforce
+                  </a>
                 </h3>
                 <p className={styles.experienceMeta}>Bengaluru, India</p>
               </div>

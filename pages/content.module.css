@@ -231,6 +231,14 @@
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+.headshotImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 .aboutStyledPic .wrapper::before {
   content: "";
   top: 0px;
@@ -796,7 +804,7 @@
 /* Ensure .project-description expands to fit the screen width */
 @media (max-width: 768px) {
   .pagesStylesMainContainer.fillHeight {
-    padding: 0px 40px;
+    padding: 0px 40px 70px;
   }
 
   .heroStyledHeroSection {
@@ -849,7 +857,7 @@
 
 @media (max-width: 480px) {
   .pagesStylesMainContainer.fillHeight {
-    padding: 0px 20px;
+    padding: 0px 20px 70px;
   }
 
   .experienceItem {

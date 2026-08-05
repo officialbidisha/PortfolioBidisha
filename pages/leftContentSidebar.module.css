@@ -55,14 +55,16 @@
 /* Responsive adjustments for the left sidebar */
 @media (max-width: 768px) {
     .sideStyledElementLeft {
-        position: static; /* Change position to static for normal flow on small screens */
+        position: fixed; /* Keep out of normal flow so it can't collide with the fixed header */
         width: 100%; /* Make the sidebar full width to fit on small screens */
-        bottom: auto; /* Reset bottom property */
-        left: auto; /* Reset left property */
-        right: auto; /* Reset right property */
-        z-index: auto; /* Reset z-index to default */
+        top: auto;
+        bottom: 0px; /* Dock as a bar at the bottom of the screen */
+        left: 0px;
+        right: 0px;
+        z-index: 10;
         padding: 10px; /* Add padding for spacing */
-        margin-bottom: 10px; /* Add margin to separate from other content */
+        background-color: rgba(10, 25, 47, 0.85);
+        backdrop-filter: blur(10px);
         text-align: center; /* Center the social links */
     }
 
