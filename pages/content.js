@@ -428,6 +428,101 @@ export default function Content() {
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
                     <a
+                      href="https://github.com/officialbidisha/ResolveFlow"
+                      className={styles.anchor}
+                    >
+                      ResolveFlow
+                    </a>
+                  </h3>
+                  <div className={styles.projectDescription}>
+                    <p>
+                      A LangGraph agent that diagnoses GitHub issues and
+                      proposes fixes with cited evidence — but never writes
+                      back to GitHub without passing an independent LLM
+                      review <em>and</em> an explicit human approval.
+                      Reasoning and execution are separated by construction:
+                      a second, independent model critiques the first
+                      model&rsquo;s diagnosis, and the single node allowed to
+                      write to GitHub refuses to run without
+                      state[&quot;approved&quot;] is True, pausing on
+                      LangGraph&rsquo;s interrupt() until a human decides. RAG
+                      grounded via Pinecone over ~2,750 chunks from 4 real
+                      repos. Try the &nbsp;
+                      <a
+                        href="https://resolveflow-web-officialbidishas-projects.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.anchor}
+                      >
+                        live demo
+                      </a>.
+                    </p>
+                  </div>
+                  <ul className={styles.projectTechList}>
+                    <li>LangGraph</li>
+                    <li>LangChain</li>
+                    <li>OpenAI</li>
+                    <li>Pinecone</li>
+                    <li>FastAPI</li>
+                    <li>React</li>
+                  </ul>
+                  <div className={styles.projectLinks}>
+                    <a
+                      href="https://github.com/officialbidisha/ResolveFlow"
+                      aria-label="Github Link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className={styles.anchor}
+                    >
+                      <Image
+                        src="/images/github.png"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
+                      />
+                    </a>
+                    <a
+                      href="https://resolveflow-web-officialbidishas-projects.vercel.app"
+                      aria-label="Live Demo Link"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className={styles.anchor}
+                    >
+                      <Image
+                        src="/images/icons8-share-3.svg"
+                        width={20}
+                        height={20}
+                        style={{filter: 'unset'}}
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.projectImage}>
+                <a
+                  href="https://resolveflow-web-officialbidishas-projects.vercel.app"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className={styles.anchor}
+                  style={{height: 'auto'}}
+                >
+                  <img
+                    decoding="async"
+                    src="/images/resolveflow.jpg"
+                    alt="ResolveFlow — pending human approval screen"
+                    style={{objectFit: 'cover', opacity: 1, height: 'auto', width: '100%'}}
+                  />
+                </a>
+              </div>
+            </li>
+            <li
+              className={`${styles.styledFeature} ${styles.sectionStyle}`}
+            >
+              <div className={styles.projectContent}>
+                <div>
+                  <p className={styles.projectOverline}>Featured Project</p>
+                  <h3 className={styles.projectTitle}>
+                    <a
                       href="https://github.com/officialbidisha/Langchain-In-Depth"
                       className={styles.anchor}
                     >
