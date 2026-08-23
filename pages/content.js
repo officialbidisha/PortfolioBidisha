@@ -903,7 +903,7 @@ export default function Content() {
                 <div>
                   <p className={styles.projectOverline}>Featured Project</p>
                   <h3 className={styles.projectTitle}>
-                    <a href="https://https://officialbidisha.github.io/CovidTracker/" className={styles.anchor}>
+                    <a href="https://officialbidisha.github.io/CovidTracker/" className={styles.anchor}>
                       CovidTracker
                     </a>
                   </h3>
