@@ -436,18 +436,14 @@ export default function Content() {
                   </h3>
                   <div className={styles.projectDescription}>
                     <p>
-                      A LangGraph agent that diagnoses GitHub issues and
-                      proposes fixes with cited evidence — but never writes
-                      back to GitHub without passing an independent LLM
-                      review <em>and</em> an explicit human approval.
-                      Reasoning and execution are separated by construction:
-                      a second, independent model critiques the first
-                      model&rsquo;s diagnosis, and the single node allowed to
-                      write to GitHub refuses to run without
-                      state[&quot;approved&quot;] is True, pausing on
-                      LangGraph&rsquo;s interrupt() until a human decides. RAG
-                      grounded via Pinecone over ~2,750 chunks from 4 real
-                      repos. Try the &nbsp;
+                      An AI agent that diagnoses GitHub issues and proposes
+                      fixes with cited evidence — but never touches GitHub
+                      without explicit human approval. Built with
+                      <em> reasoning/execution separation</em>: a second LLM
+                      independently reviews the first model&rsquo;s diagnosis,
+                      and writes are gated by human approval. RAG grounded in
+                      Pinecone over real repos. Production-grade safety gates
+                      + two-tier evaluation framework. Try the &nbsp;
                       <a
                         href="https://resolveflow-web-officialbidishas-projects.vercel.app"
                         target="_blank"
