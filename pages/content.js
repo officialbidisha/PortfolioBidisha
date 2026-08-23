@@ -619,16 +619,8 @@ export default function Content() {
                   </h3>
                   <div className={styles.projectDescription}>
                     <p>
-                      A clone of google with search facilities, random search
-                      with images built with love using Next.js
-                      <a
-                        href="https://google-cloneq-m78il8ifb-officialbidisha.vercel.app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.anchor}
-                      >
-                        Google Clone
-                      </a>
+                      A clone of Google with search facilities and a random
+                      image search, built with Next.js.
                     </p>
                   </div>
                   <ul className={styles.projectTechList}>
@@ -656,7 +648,7 @@ export default function Content() {
               </div>
               <div className={styles.projectImage}>
                 <a
-                  href="https://officialbidisha.github.io/GoogleClone/"
+                  href="https://github.com/officialbidisha/GoogleClone"
                   rel="noopener noreferrer"
                   target="_blank"
                   className={styles.anchor}
