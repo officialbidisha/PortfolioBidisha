@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bidisha Das - Résumé</title>
+<meta name="author" content="Bidisha Das">
+<style>
+  @page { size: A4; margin: 13mm 14mm 12mm; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 9.6pt; line-height: 1.36; color: #111; }
+  h1 { font-size: 21pt; margin: 0; letter-spacing: 0.2px; }
+  .headline { font-size: 10.5pt; margin: 2px 0 4px; color: #222; }
+  .contact { font-size: 9pt; color: #333; }
+  .contact span { white-space: nowrap; }
+  h2, .role, .sub { break-after: avoid; }
+  .role .left { flex: 1; padding-right: 12px; }
+  .contact a { color: #0b4f8a; text-decoration: none; }
+  h2 { font-size: 10.2pt; text-transform: uppercase; letter-spacing: 0.8px; margin: 11px 0 4px; padding-bottom: 2px; border-bottom: 1px solid #999; }
+  .role { display: flex; justify-content: space-between; align-items: baseline; margin-top: 7px; }
+  .role b { font-size: 10.2pt; }
+  .role > span:last-child { font-size: 9pt; color: #333; white-space: nowrap; }
+  .role .left { font-size: 9.6pt; color: #111; }
+  .sub { font-style: italic; color: #333; margin: 0 0 2px; }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin: 1.5px 0; }
+  p { margin: 2px 0; }
+  .skills p { margin: 1.5px 0; }
+  .avoid { break-inside: avoid; }
+  a { color: #0b4f8a; text-decoration: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Bidisha Das</h1>
+  <div class="headline">Senior Software Engineer · Backend &amp; Platform Engineering · AI Infrastructure · Enterprise Authorization</div>
+  <div class="contact"><span>Bengaluru, India</span> · <span><a href="mailto:officialbidisha1@gmail.com">officialbidisha1@gmail.com</a></span> · <span><a href="https://www.linkedin.com/in/bidisha-das/">linkedin.com/in/bidisha-das</a></span> · <span><a href="https://github.com/officialbidisha">github.com/officialbidisha</a></span> · <span><a href="https://portfolio-bidisha.vercel.app/">portfolio-bidisha.vercel.app</a></span></div>
+</header>
+
+<h2>Summary</h2>
+<p>Backend and platform engineer with 6 years of production experience, currently a Senior Member of Technical Staff at Salesforce. I build enterprise authorization and AI-agent infrastructure: Java and Python services, metadata-grounded agent workflows, MCP integrations, and permission-aware tool execution behind human approval, with authorization decisions kept in deterministic code. Earlier: playback reliability at Disney+ Hotstar, fintech journeys at MakeMyTrip, and platform tooling at AutoRABIT.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><b>Languages:</b> Java, Python, TypeScript/JavaScript, SQL</p>
+  <p><b>Backend &amp; APIs:</b> Spring Boot, FastAPI, REST, Salesforce Metadata and Tooling APIs, GitHub REST API, OData v4</p>
+  <p><b>Authorization &amp; safety:</b> RBAC and enterprise access management, permission-aware tool execution, approval-gated writes, OAuth, fail-closed checks</p>
+  <p><b>AI infrastructure:</b> MCP servers, LangGraph (interrupt/resume, Postgres checkpointing), RAG with Pinecone, agent evaluation (rubric-based LLM judge, must-pass safety cases)</p>
+  <p><b>Data &amp; infrastructure:</b> PostgreSQL, Docker, Kubernetes, AWS, GitHub Actions CI, Splunk</p>
+  <p><b>Frontend (supporting):</b> React, Next.js, Angular, Vue, Shaka Player (DASH/HLS)</p>
+</div>
+
+<h2>Experience</h2>
+<div class="role"><b>Salesforce</b><span>Dec 2024 – Present</span></div>
+<p class="sub">Senior Member of Technical Staff · Bengaluru, India</p>
+<ul>
+  <li>Designed, built and deployed <b>five production AI agent workflows for enterprise access management</b>, cutting a ~60-day manual process to ~5 days of self-serve execution (~92% faster).</li>
+  <li>Extended the in-house Agentforce platform with a <b>retrieval-to-action layer</b>: natural-language requests retrieve versioned Skills, enterprise metadata grounds the plan, and permission-aware tools execute structured operations; 10+ teams self-serve on it.</li>
+  <li><b>Authored the MCP server</b> that exposes eight enterprise capabilities to agents, with structured tool contracts, explicit failure semantics and permission-aware execution.</li>
+  <li>Shipped a <b>Slack agent adopted by 150+ people across 8 teams</b>, mostly non-engineers; privileged operations run only under the requester’s own permissions and behind human approval.</li>
+  <li>Built governed <b>Metadata API and Tooling API integrations</b> across roles, groups, queues, sharing rules and access policies, with schema validation and authorization decisions in deterministic code, reducing misconfigured access requests by ~35%.</li>
+  <li>Built <b>Java services on PostgreSQL</b> for role and queue access summaries, restriction rules and public-group membership queries, plus field-level security checks.</li>
+  <li>Built the <b>agent evaluation and regression framework</b>: behavioral checks on retrieval, tool selection and permissions; an LLM judge with a written rubric and pass thresholds; permission safety cases that must pass on every change.</li>
+  <li>Migrated five workflows from a legacy V1 retrieval-driven architecture to the redesigned V2 platform, consolidating 20+ prompts, permissions, tool definitions and structured outputs.</li>
+  <li>Deployed and operated agent services on AWS with Docker and Kubernetes; event-driven integrations decoupled workflows from downstream systems, improving throughput by ~40%. Mentor 5+ engineers through code and design reviews.</li>
+</ul>
+
+<div>
+<div class="role"><b>Disney+ Hotstar</b><span>Jan 2023 – Dec 2024</span></div>
+<p class="sub">Software Development Engineer II · Playback (web and TV) · Remote</p>
+<ul>
+  <li>Reduced player failure rate by <b>~70%</b> by matching recovery to each error class: bounded auto-retry, failover to a secondary source and variant blacklisting, without restarting playback.</li>
+  <li>Fixed session analytics that counted retries as new sessions by redesigning playback-session identity; defined startup, rebuffer and failure metrics with Product and Data Science.</li>
+  <li>Cut load time by <b>~10% for 50M+ users</b> with segment prefetching and a concurrency-capped preload manager that parses the manifest while DRM initializes in parallel.</li>
+  <li>Built a web-worker-based playback reporting API for real-time error tracking, and caption sync for stitched ads on Apple HLS across 50+ countries.</li>
+</ul>
+</div>
+
+<div class="avoid">
+<div class="role"><b>MakeMyTrip</b><span>Jun 2022 – Jan 2023</span></div>
+<p class="sub">Senior Software Engineer · TripMoney (fintech) · Bengaluru, India</p>
+<ul>
+  <li>Built lending, credit-card and forex journeys and integrated partner APIs with retry and validation, raising transaction success by 18%, cutting API latency by ~30% and lowering application drop-off by ~25%.</li>
+  <li>Led web performance work (LCP, FCP, TTFB) through code-splitting, image compression and bundle-size reduction.</li>
+</ul>
+</div>
+
+<div class="avoid">
+<div class="role"><b>AutoRABIT</b><span>Sep 2020 – Jun 2022</span></div>
+<p class="sub">Software Developer · Hyderabad, India</p>
+<ul>
+  <li>Built a connector that loads external CSV data into Salesforce using Java, Spring Boot and Apache Olingo (OData v4), hosted on AWS EC2 and S3.</li>
+  <li>Built the organisation-wide design system (Angular, PrimeNG, NgRx, Web Components) in a micro-frontend setup, used as the single source of truth for UI.</li>
+  <li>Delivered a Configure-Price-Quote (CPQ) application that contributed to ~$2M in revenue.</li>
+</ul>
+</div>
+
+<h2>Personal Projects</h2>
+<div class="avoid">
+<div class="role"><span class="left"><b>ResolveFlow</b> · GitHub issue diagnosis with approval-gated execution</span><span><a href="https://github.com/officialbidisha/ResolveFlow">github.com/officialbidisha/ResolveFlow</a></span></div>
+<ul>
+  <li>LangGraph agent that diagnoses GitHub issues with RAG citations over ~2,750 closed-issue chunks; an independent LLM review whose approve/escalate decision is computed in code. FastAPI + React, deployed on Render and Vercel.</li>
+  <li>Human approval is a LangGraph <code>interrupt()</code> checkpointed in PostgreSQL and resumable from a later request. Execution refuses without recorded approval, the only write tools are comment and label, and writes run under the requester’s GitHub OAuth token with a Postgres write ledger for retry-safe posting.</li>
+  <li>GitHub Actions runs 13 code-graded safety-gate checks (100% pass bar) and the approval-path and concurrency test suites on every pull request; threshold-gated capability evals on real issues run on main.</li>
+</ul>
+</div>
+<div class="avoid">
+<div class="role"><span class="left"><b>BhashaRoute</b> · Multilingual intent router with a safety gate</span><span><a href="https://github.com/officialbidisha/bhasharoute">github.com/officialbidisha/bhasharoute</a></span></div>
+<ul>
+  <li>English/Hindi/Bengali intent routing with calibrated abstention; 87.8% macro-F1 vs 62.0% for keyword rules on a human-translated test set of 8,157 requests, and a fail-closed gate with 99.5% recall on state-changing requests (Python, scikit-learn, FastAPI).</li>
+</ul>
+</div>
+
+<h2>Open Source</h2>
+<p><b>Shaka Player</b> (Google’s DASH/HLS player): merged subtitle-role fixes for HLS (<a href="https://github.com/shaka-project/shaka-player/pull/5357">#5357</a>) and DASH role/kind="subtitle" with unit tests (<a href="https://github.com/shaka-project/shaka-player/pull/10441">#10441</a>).</p>
+
+<h2>Education</h2>
+<div class="role"><b>St. Thomas’ College of Engineering &amp; Technology (MAKAUT)</b><span>2016 – 2020</span></div>
+<p>B.Tech, Computer Science &amp; Engineering · CGPA 9.29/10</p>
+</body>
+</html>

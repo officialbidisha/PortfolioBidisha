@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./content.module.css";
 export default function Content() {
   return (
-    <div id="content">
+    <div id="content" className={styles.contentRoot}>
       <main className={`${styles.pagesStylesMainContainer} ${styles.fillHeight}`}>
         <section className={styles.heroStyledHeroSection}>
           <div className={styles.typewriter} style={{ transitionDelay: '100ms'}}>
@@ -13,7 +13,7 @@ export default function Content() {
           </div>
           <div style={{ transitionDelay: '350ms' }}>
             <p className={styles.heroTagline}>
-              Currently building Platform{" "}
+              Senior Software Engineer · Backend &amp; Platform Engineering{" "}
               <a
                 href="https://www.salesforce.com/"
                 target="_blank"
@@ -26,59 +26,64 @@ export default function Content() {
           </div>
           <div  style={{transitionDelay: '400ms'}}>
             <p>
-              I'm a software developer specializing in building and developing
-              softwares with remarkable user experience. Having experince React,
-              Angular and Vue, I build applications that are scalable and
-              flexible.
+              I build secure, scalable backend systems and the platforms that
+              let AI agents act safely inside enterprise software.
               <br/>
               <br/>
-              Currently, I'm focused on Salesforce-native Agentic AI and
-              Retrieval-Augmented Generation (RAG) — crafting intelligent,
-              context-aware systems that elevate user workflows and strengthen
-              platform intelligence. See the &nbsp;
+              I&rsquo;m a Senior Member of Technical Staff at Salesforce, working
+              across enterprise access management, Java and Python backend
+              services, AI agent orchestration, MCP integrations, and
+              permission-aware tool execution with human approval. See the
+              &nbsp;
               <a href="#experience" className={styles.anchor}>
                 Experience
-              </a> section below for details.
+              </a> section for details.
               <br/>
               <br/>
-              I also openly contribute to &nbsp;
-              <a href="https://github.com/shaka-project/shaka-player"
-              target="_blank"
-              rel="noreferrer"
-              className= {styles.anchor}>
-                Shaka Player
-              </a> - a open-source JavaScript library used by Google for adaptive media.
-              <br/>
-              <br/>
-              <br /> Previously, I contributed to the Player Team at &nbsp;
+              My engineering interests are distributed systems, PostgreSQL,
+              developer infrastructure, and reliable execution layers for AI
+              agents. Before Salesforce I worked on playback reliability at &nbsp;
               <a
                 href="https://hotstar.com/"
                 target="_blank"
-                rel="norefferer"
+                rel="noopener noreferrer"
                 className={styles.anchor}
               >
-                Disney+Hotstar
-              </a>, ensuring seamless streaming experiences; worked on web and
-              mobile performance optimisation and a fintech application
-              (TripMoney) at &nbsp;
+                Disney+ Hotstar
+              </a>, fintech journeys at &nbsp;
               <a
                 href="https://makemytrip.com/"
                 target="_blank"
-                rel="norefferer"
+                rel="noopener noreferrer"
                 className={styles.anchor}
               >
                 MakeMyTrip
-              </a>; and built a scalable Design System for organisation-level
-              consumption at &nbsp;
+              </a>, and platform tooling at &nbsp;
               <a
                 href="https://autorabit.com/"
                 target="_blank"
-                rel="norefferer"
+                rel="noopener noreferrer"
                 className={styles.anchor}
               >
                 AutoRABIT
-              </a>.
+              </a>. I also contribute to &nbsp;
+              <a href="https://github.com/shaka-project/shaka-player"
+              target="_blank"
+              rel="noopener noreferrer"
+              className= {styles.anchor}>
+                Shaka Player
+              </a>, Google&rsquo;s open-source DASH/HLS player.
             </p>
+          </div>
+          <div style={{ transitionDelay: '450ms' }}>
+            <a
+              className={styles.heroCta}
+              href="/assets/resume.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              View résumé (PDF)
+            </a>
           </div>
         </section>
         <section
@@ -92,52 +97,45 @@ export default function Content() {
             <div className={styles.aboutStyledText}>
               <div>
                 <p>
-                  Hello! My name is Bidisha and I enjoy developing websites
-                  online. My interest in web development started way back in
-                  2019, when I was introduced to Vue by a random documentary on
-                  YouTube. It amazed me and I wanted to learn the most trendy
-                  front-end framework then, Angular.
+                  I&rsquo;m a backend and platform engineer with six years of
+                  experience shipping production software, most recently on
+                  enterprise authorization and AI agent infrastructure at
+                  Salesforce.
                 </p>
                 <p>
-                  As I made small applications on Angular, it intrigued my
-                  interest in front-end frameworks and I delved deep into
-                  JavaScript. Along with JavaScript I have also learnt other
-                  advanced JavaScript frameworks like React and Vue in addition
-                  to Angular.
+                  Most of my work is the execution layer around the model:
+                  turning a natural-language request into a plan grounded in
+                  real enterprise metadata, then running it through tools that
+                  respect the requester&rsquo;s permissions and stop for human
+                  approval when they should. Authorization decisions live in
+                  deterministic code, not in a prompt.
                 </p>
                 <p>
-                  My main focus these days is web and mobile performance
-                  optimisation, building a fintech application (TripMoney), and
-                  revamping desktop-smooth workflow at &nbsp;
-                  <a
-                    className={styles.anchor}
-                    href="https://makemytrip.com"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    MakeMyTrip
-                  </a>
-                  for the customer loyality and satisfaction
+                  I started on the frontend (design systems, performance work,
+                  and video playback), and that still shapes how I build
+                  platforms other engineers can use. These days I spend most of
+                  my time on backend services, PostgreSQL, and making agent
+                  workflows testable and safe to operate.
                 </p>
                 <p>
-                  Here are a few technologies I've been working with recently:
+                  Technologies I work with regularly:
                 </p>
               </div>
               <ul className={styles.skillsList}>
-                <li>JavaScript(ES6+)</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>Thunk</li>
-                <li>Loadable</li>
-                <li>Nginx</li>
-                <li>Angular</li>
-                <li>Node.js</li>
-                <li>NgRx(v11)</li>
-                <li>RxJs(v6)</li>
-                <li>Vue</li>
-                <li>Firebase</li>
+                <li>Java</li>
                 <li>Spring Boot</li>
+                <li>Python</li>
+                <li>TypeScript</li>
+                <li>PostgreSQL / SQL</li>
+                <li>REST APIs</li>
+                <li>MCP</li>
+                <li>LangGraph</li>
+                <li>RBAC &amp; access control</li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>AWS</li>
+                <li>GitHub Actions</li>
+                <li>React</li>
               </ul>
             </div>
             <div className={styles.aboutStyledPic}>
@@ -149,7 +147,7 @@ export default function Content() {
                     height={500}
                     sizes="(min-width: 768px) 300px, 220px"
                     src="/images/1.jpg"
-                    alt="Headshot"
+                    alt="Bidisha Das"
                   />
                 </div>
               </div>
@@ -177,71 +175,82 @@ export default function Content() {
               <p className={styles.experienceRange}>Dec 2024 — Present</p>
             </div>
             <p className={styles.experienceIntro}>
-              Currently building Platform @ Salesforce, where I focus on
-              Salesforce-native Agentic AI and Retrieval-Augmented Generation
-              (RAG) — crafting intelligent, context-aware systems that elevate
-              user workflows and strengthen platform intelligence.
+              Backend and AI-platform work for enterprise access management:
+              Java and Python services, metadata-grounded agent workflows, MCP
+              integrations, and permission-aware execution behind human
+              approval.
             </p>
             <ul className={styles.experienceStack}>
-              <li>Agentforce Skills</li>
-              <li>Headless 360</li>
-              <li>MCP</li>
               <li>Java</li>
-              <li>Spring</li>
+              <li>Spring Boot</li>
+              <li>Python</li>
               <li>TypeScript</li>
+              <li>PostgreSQL</li>
+              <li>MCP</li>
               <li>REST APIs</li>
-              <li>Metadata API</li>
-              <li>Tooling API</li>
+              <li>Metadata &amp; Tooling APIs</li>
+              <li>RBAC</li>
               <li>AWS</li>
               <li>Docker</li>
               <li>Kubernetes</li>
-              <li>Event Streaming</li>
               <li>Splunk</li>
               <li>CI/CD</li>
             </ul>
             <ul className={styles.experienceList}>
               <li>
-                Own architecture and delivery of five production AI agent
+                Designed, built and deployed five production AI agent
                 workflows for enterprise access management, cutting a process
-                that previously took ~60 days of manual work to ~5 days of
-                self-serve execution — a ~92% reduction in turnaround time.
+                that took ~60 days of manual work to ~5 days of self-serve
+                execution (~92% faster).
               </li>
               <li>
-                Extend the in-house Agentforce integration platform with a
-                retrieval-to-action architecture — natural-language requests
-                retrieve versioned Skills, enterprise metadata grounds the
-                plan, and permission-aware tools execute structured operations
-                — enabling 10+ teams to self-serve.
+                Extended the in-house Agentforce platform with a
+                retrieval-to-action layer: natural-language requests retrieve
+                versioned Skills, enterprise metadata grounds the plan, and
+                permission-aware tools execute structured operations. 10+
+                teams now self-serve on it.
+              </li>
+              <li>
+                Authored the MCP server that exposes eight enterprise
+                capabilities to agents, with structured tool contracts,
+                explicit failure semantics and permission-aware execution.
+              </li>
+              <li>
+                Shipped a Slack agent adopted by 150+ people across 8 teams,
+                mostly non-engineers. Privileged operations run only under the
+                requester&rsquo;s own permissions and behind human approval.
+              </li>
+              <li>
+                Built governed Metadata API and Tooling API integrations across
+                roles, groups, queues, sharing rules and access policies, with
+                schema validation and authorization decisions kept in
+                deterministic code, reducing misconfigured access requests by
+                ~35%.
+              </li>
+              <li>
+                Built Java services on PostgreSQL for role and queue access
+                summaries, restriction rules and public-group membership
+                queries, plus field-level security checks.
+              </li>
+              <li>
+                Built the agent evaluation and regression framework: behavioral
+                checks on retrieval, tool selection and permissions, an LLM
+                judge with a written rubric and pass thresholds, and
+                permission safety cases that must pass on every change.
               </li>
               <li>
                 Migrated five workflows from a legacy V1 retrieval-driven
                 architecture to the redesigned V2 platform, consolidating 20+
-                prompts, permissions, tool definitions, and structured outputs
-                while improving execution reliability.
+                prompts, permissions, tool definitions and structured outputs.
               </li>
               <li>
-                Build governed REST API integrations and agent tool routing
-                across roles, groups, queues, sharing configurations, and
-                access policies via Metadata API and Tooling API, with schema
-                validation and operation-level controls reducing
-                misconfigured access requests by ~35%.
+                Deployed and operated agent services on AWS with Docker and
+                Kubernetes; event-driven integrations decoupled workflows from
+                downstream systems, improving throughput by ~40%.
               </li>
               <li>
-                Onboarded eight enterprise capabilities to Headless 360 (API
-                exposure, tool discovery, metadata grounding, reusable
-                Skills, MCP execution); authored reusable integration
-                guidance adopted by 10+ internal teams.
-              </li>
-              <li>
-                Deployed and operated agent and integration services on AWS
-                using Docker containerization and Kubernetes orchestration;
-                built event-driven, data-streaming integrations to decouple
-                workflows from downstream systems, improving throughput by
-                ~40% and strengthening fault isolation.
-              </li>
-              <li>
-                Mentor 5+ junior engineers and contractors through code
-                reviews, design reviews, and architecture discussions.
+                Mentor 5+ engineers and contractors through code and design
+                reviews.
               </li>
             </ul>
           </div>
@@ -259,55 +268,65 @@ export default function Content() {
               <p className={styles.experienceRange}>Jan 2023 — Dec 2024</p>
             </div>
             <p className={styles.experienceIntro}>
-              Part of the Player Team, working across Web and Living Room
-              platforms to elevate streaming performance, reliability, and
-              user experience.
+              Player team, web and living-room (TV) platforms: playback
+              reliability, startup performance and session analytics for a
+              large-scale streaming service.
             </p>
             <ul className={styles.experienceStack}>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Shaka Player</li>
+              <li>DASH / HLS</li>
               <li>React</li>
               <li>Next.js</li>
-              <li>Shaka Player</li>
-              <li>JavaScript</li>
               <li>Web Workers</li>
-              <li>Apple HLS</li>
-              <li>Amplitude</li>
               <li>Microfrontends</li>
-              <li>Living Room Platforms</li>
             </ul>
             <ul className={styles.experienceList}>
               <li>
-                Developed microfrontend architecture using React, Next.js,
-                and Shaka Player.
+                Reduced player failure rate by ~70% by matching recovery to
+                each error class: bounded auto-retry, failover to a secondary
+                source and variant blacklisting, without restarting playback.
               </li>
               <li>
-                Contributed actively to the Shaka Player open-source project,
-                resolving timestamp issues that eliminated stream repetition
-                during the World Cup.
+                Fixed session analytics that counted retries as new sessions
+                by redesigning playback-session identity, and defined startup,
+                rebuffer and failure metrics with Product and Data Science.
               </li>
               <li>
-                Reduced player failure rate by 70% by implementing a system
-                to dynamically blacklist decoding layers.
+                Cut load time by ~10% for 50M+ users with segment prefetching
+                and a concurrency-capped preload manager that parses the
+                manifest while DRM initializes in parallel.
               </li>
               <li>
-                Enhanced startup performance on Living Room devices by
-                preloading manifests, parallelizing page rendering, and
-                preconnecting high-frequency DNS.
+                Designed a web-worker-based playback reporting API for
+                real-time error tracking.
               </li>
               <li>
-                Built a singleton-based session tracking module to ensure
-                consistency across multi-device environments.
+                Implemented caption sync for stitched ads on Apple HLS,
+                enabling closed captions across 50+ countries.
               </li>
               <li>
-                Designed a web worker-based playback reporting API to support
-                real-time multiplayer error tracking.
-              </li>
-              <li>
-                Optimized Time to Interactive (TTI) by 5ms on Living Room
-                platforms, improving responsiveness.
-              </li>
-              <li>
-                Implemented caption sync support for stitched ads using Apple
-                HLS, enabling closed captions across 50+ countries.
+                Upstream Shaka Player contributions: subtitle-role fixes for
+                HLS (
+                <a
+                  href="https://github.com/shaka-project/shaka-player/pull/5357"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.anchor}
+                >
+                  #5357
+                </a>
+                ) and DASH (
+                <a
+                  href="https://github.com/shaka-project/shaka-player/pull/10441"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.anchor}
+                >
+                  #10441
+                </a>
+                ), both merged.
               </li>
             </ul>
           </div>
@@ -376,48 +395,46 @@ export default function Content() {
               <p className={styles.experienceRange}>Sep 2020 — Jun 2022</p>
             </div>
             <p className={styles.experienceIntro}>
-              Worked on frontend platform tooling and reusable UI systems to
-              support large-scale DevOps and CRM automation products.
+              Platform tooling, integrations and reusable UI systems for
+              DevOps and CRM release-automation products.
             </p>
             <ul className={styles.experienceStack}>
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>OData v4</li>
+              <li>AWS</li>
+              <li>Docker</li>
               <li>Angular</li>
-              <li>PrimeNG</li>
               <li>NgRx</li>
               <li>Vue</li>
               <li>GraphQL</li>
-              <li>Docker</li>
-              <li>AWS</li>
               <li>Web Components</li>
-              <li>Nginx</li>
-              <li>Node.js</li>
             </ul>
             <ul className={styles.experienceList}>
               <li>
-                Worked on frontend infrastructure and enterprise tools in the
-                DevOps and CRM automation space.
+                Built a connector that loads external CSV data into Salesforce
+                using Java, Spring Boot and Apache Olingo (OData v4), hosted on
+                AWS EC2 and S3.
               </li>
               <li>
-                Built a design system using Angular, PrimeNG, NgRx, and Web
-                Components in a micro-frontend setup.
+                Built the organisation-wide design system (Angular, PrimeNG,
+                NgRx, Web Components) in a micro-frontend setup, used as the
+                single source of truth for UI implementation.
               </li>
               <li>
-                Developed Progressive Web App (PWA) techniques with cache
-                busting, lazy loading, and webpack tweaks.
+                Delivered a Configure-Price-Quote (CPQ) application that
+                contributed to ~$2M in revenue.
               </li>
               <li>
-                Delivered a Configure Price Quote (CPQ) system using Vue,
-                GraphQL, and Docker, contributing to a ~$2M revenue impact.
-              </li>
-              <li>
-                Optimized the UI layer for ARM deployments on AWS, improving
-                load times and accessibility.
+                Applied PWA techniques (cache busting, lazy loading, webpack
+                tuning) to the UI layer deployed on AWS.
               </li>
             </ul>
           </div>
         </section>
         <section id="projects">
           <h2 className={styles.numberedHeading} data-sr-id="3">
-            Some Things I've Built
+            Selected Projects
           </h2>
           <ul className={styles.styledProjectsFeatured}>
             <li
@@ -436,14 +453,17 @@ export default function Content() {
                   </h3>
                   <div className={styles.projectDescription}>
                     <p>
-                      An AI agent that diagnoses GitHub issues and proposes
-                      fixes with cited evidence — but never touches GitHub
-                      without explicit human approval. Built with
-                      <em> reasoning/execution separation</em>: a second LLM
-                      independently reviews the first model&rsquo;s diagnosis,
-                      and writes are gated by human approval. RAG grounded in
-                      Pinecone over real repos. Production-grade safety gates
-                      + two-tier evaluation framework. Try the &nbsp;
+                      A LangGraph agent that diagnoses GitHub issues with cited
+                      evidence and never writes to GitHub without an
+                      independent review and explicit human approval. The
+                      approval pause is a LangGraph <code>interrupt()</code>{" "}
+                      checkpointed in PostgreSQL and resumable from a later
+                      request. Execution refuses to run without a recorded
+                      approval, the only write tools are comment and label, and
+                      writes run under the signed-in user&rsquo;s own GitHub
+                      token with a retry-safe write ledger. A 13-check
+                      safety-gate suite runs in GitHub Actions on every pull
+                      request. Try the &nbsp;
                       <a
                         href="https://resolveflow-web-officialbidishas-projects.vercel.app"
                         target="_blank"
@@ -456,21 +476,23 @@ export default function Content() {
                   </div>
                   <ul className={styles.projectTechList}>
                     <li>LangGraph</li>
-                    <li>LangChain</li>
-                    <li>OpenAI</li>
-                    <li>Pinecone</li>
                     <li>FastAPI</li>
+                    <li>PostgreSQL</li>
+                    <li>Pinecone</li>
+                    <li>OpenAI</li>
                     <li>React</li>
+                    <li>GitHub Actions</li>
                   </ul>
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/ResolveFlow"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -485,6 +507,7 @@ export default function Content() {
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/icons8-share-3.svg"
                         width={20}
                         height={20}
@@ -560,12 +583,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/Langchain-In-Depth"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -580,6 +604,7 @@ export default function Content() {
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/icons8-share-3.svg"
                         width={20}
                         height={20}
@@ -606,12 +631,15 @@ export default function Content() {
                 </a>
               </div>
             </li>
+          </ul>
+          <h3 className={styles.earlierHeading}>Earlier Frontend Projects</h3>
+          <ul className={styles.styledProjectsFeatured}>
             <li
               className={`${styles.styledFeature} ${styles.sectionStyle}`}
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/GoogleClone" className={styles.anchor}>
                       Google Clone
@@ -631,12 +659,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/GoogleClone/"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -675,7 +704,7 @@ export default function Content() {
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/FlyM/" className={styles.anchor}>FlyM</a>
                   </h3>
@@ -709,12 +738,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/FlyM/"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -735,7 +765,7 @@ export default function Content() {
                   <Image
                     decoding="async"
                     src="/images/Flym1.png"
-                    alt="Slack Clone"
+                    alt="FlyM flight booking app"
                     width={0}
                     height={0}
                     sizes ='(min-width:900px) 900px, 100vw'
@@ -749,7 +779,7 @@ export default function Content() {
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a href="https://github.com/officialbidisha/Slack-Clone-/"  className={styles.anchor}>
                       Slack Clone
@@ -780,12 +810,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/Slack-Clone-/"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -821,7 +852,7 @@ export default function Content() {
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a href="https://officialbidisha.github.io/KanbanUI/"  className={styles.anchor}>
                       Jira Clone
@@ -855,12 +886,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/KanbanUI"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -901,7 +933,7 @@ export default function Content() {
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a href="https://officialbidisha.github.io/CovidTracker/" className={styles.anchor}>
                       CovidTracker
@@ -933,12 +965,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/CovidTracker"
-                      aria-label="Github Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -979,7 +1012,7 @@ export default function Content() {
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/MealMarathon/"
@@ -1014,12 +1047,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/MealMarathon"
-                      aria-label="GitHub Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -1041,7 +1075,7 @@ export default function Content() {
                     sizes="(min-width:900px) 900px, 100vw"
                     decoding="async"
                     src="/images/ReactMeals.png"
-                    alt="Covid-Tracker"
+                    alt="Meals Marathon food ordering app"
                     width={0}
                     height={0}
                     style={{objectFit: 'cover', opacity: 1, height:'auto'}}
@@ -1055,7 +1089,7 @@ export default function Content() {
             >
               <div className={styles.projectContent}>
                 <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
+                  <p className={styles.projectOverline}>Frontend Project</p>
                   <h3 className={styles.projectTitle}>
                     <a
                       href="https://officialbidisha.github.io/Git-Guide/"
@@ -1092,12 +1126,13 @@ export default function Content() {
                   <div className={styles.projectLinks}>
                     <a
                       href="https://github.com/officialbidisha/Git-Guide"
-                      aria-label="GitHub Link"
+                      aria-label="GitHub repository"
                       rel="noopener noreferrer"
                       target="_blank"
                       className={styles.anchor}
                     >
                       <Image
+                        alt=""
                         src="/images/github.png"
                         width={20}
                         height={20}
@@ -1127,85 +1162,6 @@ export default function Content() {
                 </a>
               </div>
             </li>
-            <li
-              className={`${styles.styledFeature} ${styles.sectionStyle}`}
-            >
-              <div className={styles.projectContent}>
-                <div>
-                  <p className={styles.projectOverline}>Featured Project</p>
-                  <h3 className={styles.projectTitle}>
-                    <a
-                      href="https://officialbidisha.github.io/QuotesDashboard/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className={styles.anchor}
-                    >
-                      Quotes Dashboard
-                    </a>
-                  </h3>
-                  <div className={styles.projectDescription}>
-                    <p>
-                      A web app that displays quotes added by different users.
-                      In addition, it also allows the user to add , edit, and
-                      delete quotes. Also, an user can comment on the quote of
-                      another user.Available at &nbsp;
-                      <a
-                        href="https://officialbidisha.github.io/QuotesDashboard/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        className={styles.anchor}
-                      >
-                        QuotesDashboard
-                      </a>.
-                      In addition, quotes can also be sorted based on timeline
-                      of creation. It also handles error scenarios and loading
-                      state.
-                    </p>
-                  </div>
-                  <ul className={styles.projectTechList}>
-                    <li>React</li>
-                    <li>Redux</li>
-                    <li>VS Code</li>
-                    <li>Firebase</li>
-                  </ul>
-                  <div className={styles.projectLinks}>
-                    <a
-                      href="https://github.com/officialbidisha/QuotesDashboard"
-                      aria-label="GitHub Link"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className={styles.anchor}
-                    >
-                      <Image
-                        src="/images/github.png"
-                        width={20}
-                        height={20}
-                        style={{filter:'unset'}}
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.projectImage}>
-                <a
-                  href="https://officialbidisha.github.io/QuotesDashboard"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  style={{height: 'auto'}}
-                  className={styles.anchor}
-                >
-                  <Image
-                    sizes="(min-width:900px) 900px, 100vw"
-                    decoding="async"
-                    src="/images/QuotesDashboard.png"
-                    alt="Git-Guide"
-                    width={0}
-                    height={0}
-                    style={{objectFit: 'cover', opacity: 1, height: 'auto'}}
-                  />
-                </a>
-              </div>
-            </li>
           </ul>
         </section>
         <section className={styles.otherProjects} id="smallprojects">
@@ -1222,24 +1178,26 @@ export default function Content() {
                   <div className={styles.projectTop}>
                     <div className={styles.folder}>
                       <Image
-                       src="/images/icons8-folder.svg"
+                        src="/images/icons8-folder.svg"
                         width={25}
                         height={25}
+                        alt=""
                         style={{filter:'unset'}}
                       />
                     </div>
                     <div className={styles.projectLinks}>
                       <a
-                        href="https://officialbidisha.github.io/React-Task-Reminder/"
-                        aria-label="Extenal link"
+                        href="https://github.com/officialbidisha/bhasharoute"
+                        aria-label="BhashaRoute: multilingual intent router with a side-effect safety gate on GitHub"
                         className={`${styles.external} ${styles.anchor}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <Image
-                         src="/images/icons8-share-3.svg"
+                          src="/images/icons8-share-3.svg"
                           width={22}
                           height={22}
+                          alt=""
                           style={{
                             marginTop: '-4px',
                             filter: 'unset'
@@ -1250,29 +1208,93 @@ export default function Content() {
                   </div>
                   <h3 className={styles.projectTitle}>
                     <a
-                      href="https://officialbidisha.github.io/React-Task-Reminder/"
+                      href="https://github.com/officialbidisha/bhasharoute"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`${styles.otherProjectA} ${styles.anchor}`}
                     >
-                      A Task Reminder using React, that provides a reminder to
-                      the user based on the tasks listed
+                      BhashaRoute: multilingual intent router with a side-effect safety gate
                     </a>
                   </h3>
                   <div className={styles.projectDescription}>
                     <p className={styles.descriptionProject}>
-                      Building a website that provides a reminder for listed
-                      items from the user. The user can add an item, delete an
-                      item and also toggle reminder.
+                      Intent routing for English, Hindi and Bengali requests,
+                      with calibrated abstention and an independent fail-closed
+                      gate for state-changing requests. On a human-translated
+                      test set of 8,157 requests: 87.8% macro-F1 vs 62.0% for
+                      keyword rules, with 99.5% recall on the safety gate.
                     </p>
                   </div>
                 </header>
                 <footer>
                   <ul className={styles.projectTechList}>
-                    <li>React</li>
-                    <li>JSON Server</li>
-                    <li>Visual Studio Code</li>
-                    <li>PrimeReact</li>
+                    <li>Python</li>
+                    <li>scikit-learn</li>
+                    <li>FastAPI</li>
+                    <li>Evaluation</li>
+                  </ul>
+                </footer>
+              </div>
+            </li>
+            <li
+              className={`${styles.styledProject} ${styles.sectionStyle}`}
+            >
+              <div className={styles.projectInner}>
+                <header>
+                  <div className={styles.projectTop}>
+                    <div className={styles.folder}>
+                      <Image
+                        src="/images/icons8-folder.svg"
+                        width={25}
+                        height={25}
+                        alt=""
+                        style={{filter:'unset'}}
+                      />
+                    </div>
+                    <div className={styles.projectLinks}>
+                      <a
+                        href="https://github.com/officialbidisha/ai-engineering-harness"
+                        aria-label="ai-engineering-harness: LangGraph execution patterns on GitHub"
+                        className={`${styles.external} ${styles.anchor}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src="/images/icons8-share-3.svg"
+                          width={22}
+                          height={22}
+                          alt=""
+                          style={{
+                            marginTop: '-4px',
+                            filter: 'unset'
+                          }}
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <h3 className={styles.projectTitle}>
+                    <a
+                      href="https://github.com/officialbidisha/ai-engineering-harness"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${styles.otherProjectA} ${styles.anchor}`}
+                    >
+                      ai-engineering-harness: LangGraph execution patterns
+                    </a>
+                  </h3>
+                  <div className={styles.projectDescription}>
+                    <p className={styles.descriptionProject}>
+                      Small, runnable LangGraph exercises on the primitives
+                      behind reliable agent execution: Command routing,
+                      interrupt()-based human approval, bounded retries and
+                      dynamic Send fan-out.
+                    </p>
+                  </div>
+                </header>
+                <footer>
+                  <ul className={styles.projectTechList}>
+                    <li>Python</li>
+                    <li>LangGraph</li>
                   </ul>
                 </footer>
               </div>
@@ -1285,6 +1307,7 @@ export default function Content() {
                   <div className={styles.projectTop}>
                     <div className={styles.folder}>
                       <Image
+                       alt=""
                        src="/images/icons8-folder.svg"
                        width={25}
                        height={25}
@@ -1294,12 +1317,13 @@ export default function Content() {
                     <div className={styles.projectLinks}>
                       <a
                         href="https://github.com/officialbidisha/Assignment-Submission-Portal"
-                        aria-label="Extenal link"
+                        aria-label="External link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`${styles.anchor} ${styles.external}`}
                       >
                         <Image
+                         alt=""
                          src="/images/icons8-share-3.svg"
                          width={22}
                          height={22}
@@ -1348,6 +1372,7 @@ export default function Content() {
                   <div className={styles.projectTop}>
                     <div className={styles.folder}>
                       <Image
+                       alt=""
                        src="/images/icons8-folder.svg"
                         width={25}
                         height={25}
@@ -1357,12 +1382,13 @@ export default function Content() {
                     <div className={styles.projectLinks}>
                       <a
                         href="https://github.com/officialbidisha/Library-Management-System"
-                        aria-label="Extenal link"
+                        aria-label="External link"
                         className={`${styles.external} ${styles.anchor}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <Image
+                         alt=""
                          src="/images/icons8-share-3.svg"
                           width={22}
                           height={22}
@@ -1411,6 +1437,7 @@ export default function Content() {
                   <div className={styles.projectTop}>
                     <div className={styles.folder}>
                       <Image
+                       alt=""
                        src="/images/icons8-folder.svg"
                        width={25}
                        height={25}
@@ -1420,13 +1447,14 @@ export default function Content() {
                     <div className={styles.projectLinks}>
                       <a
                         href="https://officialbidisha.github.io/Todo-Mockup/"
-                        aria-label="Extenal link"
+                        aria-label="External link"
 
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`${styles.external} ${styles.newTodoMockup}`}
                       >
                         <Image
+                         alt=""
                          src="/images/icons8-share-3.svg"
                          width={22}
                          height={22}
@@ -1478,10 +1506,10 @@ export default function Content() {
           <h2 className={`${styles.numberedHeading} ${styles.overline}`}>Lastly!</h2>
           <h2 className={styles.title}>Get In Touch</h2>
           <p style={{fontSize: '18px'}}>
-            I'm available on social networking sites and mostly active on Gmail,
-            or LinkedIn. Whether it is just a question, or want to collaborate
-            with me, or hire me, kindly drop me an email. I'll revert back to
-            you as soon as possible.
+            I&rsquo;m happy to talk about backend and platform engineering,
+            authorization, or building reliable execution layers for AI
+            agents. Email is the fastest way to reach me; I&rsquo;m also on
+            LinkedIn.
           </p>
           <a
             className={`${styles.emailLink} ${styles.anchor}`}
@@ -1491,6 +1519,13 @@ export default function Content() {
           >
             Say Hello
           </a>
+          <nav className={styles.contactLinks} aria-label="Profiles">
+            <a href="https://github.com/officialbidisha" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/bidisha-das/" target="_blank" rel="noopener me">LinkedIn</a>
+            <a href="https://dev.to/officialbidisha" target="_blank" rel="noopener me">DEV</a>
+            <a href="https://stackoverflow.com/users/11637039/bidisha-das" target="_blank" rel="noopener me">Stack Overflow</a>
+            <a href="/assets/resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+          </nav>
         </section>
       </main>
     </div>
