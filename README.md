@@ -4,7 +4,7 @@ Source for [portfolio-bidisha.vercel.app](https://portfolio-bidisha.vercel.app/)
 Bidisha Das, Senior Member of Technical Staff at Salesforce (backend and platform engineering, enterprise
 authorization, AI agent infrastructure).
 
-Built with Next.js 13 (pages router) and React 18, deployed on Vercel from `main`.
+Built with Next.js 16 (pages router, Turbopack builds) and React 18, deployed on Vercel from `main`.
 
 ## Layout
 
