@@ -18,13 +18,13 @@ export default function Header() {
     <header className={`${styles.nav} ${styles.styledHeader}`}>
       <nav className={`${styles.nav} ${styles.styledNav}`}>
         <div tabIndex="-1">
-          <a href="#about" aria-label="home" className={styles.anchor}>
+          <a href="#about" aria-label="Bidisha Das, home" className={styles.anchor}>
             <Image
+              alt=""
               src="/images/logo.jpg"
               width={80}
               height={60}
               style={{filter:"unset"}}
-              href="/"
             />
           </a>
         </div>
@@ -72,9 +72,9 @@ export default function Header() {
             >
               <a
                 className={`${styles.resumeButton} ${styles.anchor}`}
-                href="https://drive.google.com/file/d/1sUoRQZpmgTUtONFiWQ9l2x7erPVdmtOA/view?usp=sharing"
+                href="/assets/resume.pdf"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 onClick={closeMenu}
               >
                 Resume
